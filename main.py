@@ -1193,8 +1193,6 @@
 # a.clear()
 
 
-
-
-s = ["ab_1", 'ac_2','bc_1', 'bc_2']
-a = [i for i in s]
-print(a)
+# s = ["ab_1", 'ac_2','bc_1', 'bc_2']
+# a = [i for i in s]
+# print(a)

@@ -972,7 +972,6 @@
 # set_param(s="#")
 
 
-
 # def digit_sum(n, even=True):
 #     s = 0
 #     while n > 0:
@@ -994,7 +993,6 @@
 # print(digit_sum(9874023, even=False))
 # print(digit_sum(38271, even=False))
 # print(digit_sum(123456789, even=False))
-
 
 
 # def display_info(name, age):
@@ -1167,7 +1165,6 @@
 #         print("\tcity:",city_name, "population:", city_population, sep="")
 
 
-
 # Множество (set) - неупорядоченная коллекция, которая содержит только уникальные элементы
 
 # s = {"banan", "apple", "orange", "apple"}
@@ -1194,8 +1191,132 @@
 
 
 # s = ["ab_1", 'ac_2','bc_1', 'bc_2']
-# a = [i for i in s]
+# a = [i for i in s if 'a' not in i]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B'+ i[1:] for i in s]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B'+ i[1:] for i in s if i[1] == 'c']
+# print(a)
+# print(['A' + i[1:] if i[0] == 'a' else 'B'+ i[1:] for i in  ["ab_1", 'ac_2','bc_1', 'bc_2'] if i[1] == 'c'])
+
+
+# тернарное выражение q = True if условие else False
+
+# a = {0, 1, 2, 3}
+# b = {4, 3, 2, 1}
+# c = a.union(b)
+# c = a | b
+# a |= b  # a +=b
+# c = a & b  # {1, 2, 3}
+# a &= b
+# c = a - b
+# a -=b
+# c = a ^ b  # unique from a and b
+# a ^=b
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+# s = s1.union(s2, s3, s4, s5, s6, s7)
+# print(len(s))
+# print(min(s))
+# print(max(s))
+
+# s1 = "hello"
+# s2 = "how are you"
+# s = set(s1) & set(s2)
+# print(s)
+# for i in s:
+#     print(i, end="")
+
+
+# s1 = "Python"
+# s2 = "Programming language"
+# s = set(s1) - set(s2)
+# print(s)
+# for i in s:
+#     print(i, end="")
+
+
+# drawing = {"zhen", "sveta", "marina"}
+# music = {"kosta", "zhen", "ilya"}
+# one_hobby = drawing ^ music
+# both_hobby = drawing & music
+# drawing = drawing - both_hobby
+
+# a = {0, 1, 2, 3, 4}
+# b = {3, 2, 1}
+# print(a >= b)
+# print(a > b)
+
+
+# frozenset
+# s = frozenset([1, 2, 3, 4, 5, 6])
+# print(s)
+
+
+# Словарь (dict) - изменяемый тип
+
+# s = [1, 2, 3]
+# d = {"one": 1, "two": 2, "three": 3}
+# print(s[1])
+# print(d["two"])
+
+# s1 = ["one", "two", "three"]
+# d1 = {1: "one", 2: "two", 3: "three"}
+# print(d1[2])
+
+# d = {0: "test", "one": 45, (1, 2.3): "кортеж", True: 1, False: 35}  # set, list, False no!
+# print(d[True])
+# d[(1, 2.3)] = 100
+
+
+# d = {'one': 1, 'two': 2}
+# d1 = dict(one=1, two=2)
+# d2 = dict([('one', 1), ('two', 2)])
+#
+# d = {x: x** 2 for x in range(7)}
+# d = {"one": 1, "two": 2, "three": 3}
+# print("two" in d)
+# print(len(d))
+# for key in d:
+#     print(key, "->", d[key])
+#
+# key = "four"
+# if key in d:
+#     print(d[key])
+#
+#
+# try:
+#     print(d[key])
+# except KeyError:
+#     print("error")
+#
+#
+# del d[key]
+# print(d)
+
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# a = 1
+# for i in d:
+#     a *= d[i]
 # print(a)
 
 
-print("Данные для github")
+# d = dict()
+# d[1] = input("->")
+# d[2] = input("->")
+# d[3] = input("->")
+# d[4] = input("->")
+
+d = {x: input("->") for x in range(1, 5)}
+print(d)
+try:
+    dislike = int(input("-?: "))
+    del d[dislike]
+except (KeyError, ValueError):
+    print("no key")
+print(d)

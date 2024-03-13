@@ -193,11 +193,115 @@
 # for x in "0123456789ABCDEFGHIJKLMNOPQ":
 
 
-for i in range(151, 1000):
-    a = "7" * i
-    while "777" in a:
-        a = a.replace("777", "111", 1)
-        a = a.replace("1111", "7", 1)
-    if a == "711":
-        print(i)
-        break
+# for i in range(151, 1000):
+#     a = "7" * i
+#     while "777" in a:
+#         a = a.replace("777", "111", 1)
+#         a = a.replace("1111", "7", 1)
+#     if a == "711":
+#         print(i)
+#         break
+
+# Combinatorika
+
+# from itertools import *
+#
+# numb = 1
+# for i in product("АДИН", repeat=5):
+#     word = "".join(i)
+#     if word == "ДИАНА":
+#         print(numb, word)
+#     numb += 1
+
+
+# from itertools import *
+#
+# numb = 1
+# for i in product("EMNOY", repeat=5):
+#     if numb == 1055:
+#         print(i)
+#     numb +=1
+
+
+# x = 1054
+# digit = []
+# while x > 0:
+#     digit.append(x % 5)
+#     x = x // 5
+# print(digit[::-1])
+
+
+# from itertools import *
+# cnt = 0
+# for i in product("XIAIO", repeat=8):
+#     if i.count("I") ==3:
+#         cnt+=1
+# print(cnt)
+
+
+# from itertools import *
+# cnt = 0
+# for i in product("KEPN", repeat=6):
+#     if i.count("E") >=1:
+#         cnt+=1
+# print(cnt)
+
+
+# from itertools import *
+# cnt = 0
+# for i in permutations("ДИС", r=7):
+#     if i[0]!= "П":
+#         cnt +=1
+# print(cnt)
+
+
+# from itertools import *
+# cnt = 0
+# for i in permutations("МАСЛО", r=5):
+#     if i[0]!= "С" and "МО" not in "".join(i):
+#         cnt +=1
+# print(cnt)
+
+
+# from itertools import *
+#
+# cnt = 0
+# for i in permutations("KAPT", r=3):
+#     if i[-1] != "P" and "KT" not in "".join(i):
+#         cnt += 1
+# print(cnt)
+
+
+# Черепаха
+
+
+# from turtle import *
+# tracer(0)
+# left(90)
+# pendown()
+# k = 30
+# for i in range(16):
+#     forward(5*k)
+#     left(70)
+#     backward(2*k)
+#     right(10)
+# penup()
+# for x in range(-10,10):
+#     for y in range(-10,10):
+#         setpos(x*k,y*k)
+#         dot(4)
+# done()
+
+
+# 8
+
+from itertools import *
+
+gl = "АЕО"
+sogl = "БНДРЛ"
+cnt = 0
+for i in product("БАНДЕРОЛЬ", repeat=7):
+    if sum(i.count(x) for x in gl)> sum(i.count(x) for x in sogl):
+        cnt+=1
+   
+print(cnt)

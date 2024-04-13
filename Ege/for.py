@@ -295,13 +295,225 @@
 
 # 8
 
-from itertools import *
+# from itertools import *
+#
+# gl = "АЕО"
+# sogl = "БНДРЛ"
+# cnt = 0
+# for i in product("БАНДЕРОЛЬ", repeat=7):
+#     if sum(i.count(x) for x in gl)> sum(i.count(x) for x in sogl):
+#         cnt+=1
+#
+# print(cnt)
 
-gl = "АЕО"
-sogl = "БНДРЛ"
-cnt = 0
-for i in product("БАНДЕРОЛЬ", repeat=7):
-    if sum(i.count(x) for x in gl)> sum(i.count(x) for x in sogl):
-        cnt+=1
-   
-print(cnt)
+
+# 16
+
+import sys
+
+sys.setrecursionlimit(3000)
+
+
+# def F(n):
+#     if n <= 14:
+#         return n * n * n + 22
+#     if n % 3 == 0 and n > 14:
+#         return F(n - 4) + F(n - 8)
+#     if n % 3 != 0 and n > 14:
+#         return F(n - 9) + n + 7
+#
+#
+# cnt = 0
+# for n in range(1, 200):
+#     if "1" not in str(F(n)) and "3" not in str(F(n)) and "5" not in str(F(n)) and "7" not in str(F(n)) \
+#             and "9" not in str(F(n)):
+#
+#         cnt += 1
+#
+# print(cnt)
+
+
+# def F(n):
+#     if n <= 4:
+#         return n
+#     if n % 2 == 0 and n > 4:
+#         return n + 4 * F(n - 1)
+#     if n % 2 != 0 and n > 4:
+#         return 2 * n * n * n + F(n - 1)
+#
+#
+# cnt = 0
+# for n in range(1, 401):
+#     if F(n) % 8 == 0:
+#         cnt += 1
+#
+# print(cnt)
+
+# from functools import lru_cache
+#
+# @lru_cache
+# def F(n):
+#     if n == 1:
+#         return 1
+#     if n > 1:
+#         return 3 * F(n - 1) + 2 * G(n - 1) +n*n
+#
+# @lru_cache
+# def G(n):
+#     if n == 1:
+#         return 1
+#     if n > 1:
+#         return 2 * F(n - 1) + 3 * G(n - 1) + n * 5
+#
+#
+# summ = 0
+# for n in str(G(222)):
+#     summ += int(n)
+#
+# suma = 0
+# for i in str(F(333)):
+#     suma += int(i)
+# print(abs(summ - suma))
+
+
+# def task(start, end, k):
+#     if start > end or (start == end and k < 2):
+#         return 0
+#     if start == end and k == 2:
+#         return 1
+#     if k == 2:
+#         return task(start + 2, end, k) + task(start + 3, end, k)
+#     if k < 2:
+#         return task(start + 2, end, k) + task(start + 3, end, k) + task(start * 2, end, k + 1) + \
+#             task(start * 3, end, k + 1)
+#
+#
+# print(task(1, 51, 0))
+
+
+# 2
+
+
+# print("x y z w F1 F2")
+# for x in range(2):
+#     for y in range(2):
+#         for z in range(2):
+#             for w in range(2):
+#                 F1 = (x <= w) == (z <= y)
+#                 F2 = (x <= w) and ((not (y)) == z)
+#                 print(x, y, z, w, int(F1), int(F2))
+
+# 17
+
+# f = open("17.3.txt")
+# a = [int(s) for s in f]
+# mina = min(a)
+# sum_par = []
+#
+# for i in range(len(a) - 1):
+#     if a[i] % 123 == mina or a[i + 1] % 123 == mina:
+#         sum_par.append(a[i] + a[i + 1])
+# print(len(sum_par), max(sum_par))
+
+
+# f = open("")
+# a = [int(s) for s in f]
+# maxi = max([x for x in a if str(x)[-1] == "6"])
+# summ = []
+# for i in range(len(a) - 1):
+#     if (str(a[i])[-1] == "6" + str(a[i + 1])[-1] == "6") == 1 and (a[i] ** 2 + a[i + 1] ** 2)<maxi**2:
+#         summ.append(a[i] ** 2 + a[i + 1] ** 2)
+# print(len(summ), max(summ))
+
+
+# f = open("PDF_8209_dokument.pdf")
+# a = [int(s) for s in f]
+# min = min([x for x in a if len(str(x)) == 2])
+# summ = []
+# for i in range(len(a) - 1):
+#     if len(str(a[i])) == 2 and len(str(a[i + 1])) == 2 and (a[i] + a[i + 1]) % min == 0:
+#         summ.append(a[i]+a[i+1])
+# print(len(summ), max(summ))
+
+
+# f = open("PDF_8209_dokument.pdf")
+# a = [int(s) for s in f]
+# max = max([x for x in a if str(abs(x))[-2:] == "13"])
+# summ = []
+# for i in range(len(a) - 2):
+#     if int(len(str(abs(a[i])))==5) + int(len(str(abs(a[i + 1])))==5) + int(len(str(abs(a[i + 2])))==5) == 2 and (
+#             a[i] + a[i + 1] + a[i + 2]) <= max:
+#         summ.append(a[i] + a[i + 1] + a[i + 2])
+# print(len(summ), max(summ))
+
+
+# 15
+
+
+# def Del(n, m):
+#     return n % m == 0
+#
+#
+# for A in range(1, 1000):
+#     for x in range(1, 10000):
+#         if (((Del(x, 24) and Del(x, 36)) <= Del(x, A)) and (A**2 - A - 5000<112)) == False:
+#             break
+#     else:
+#         print(A)
+
+
+# for A in range(1, 10000):
+#     for x in range(1, 10000):
+#         if ((x&75 == 0) or ((x&80==0) <= (x&A != 0))) == False:
+#             break
+#     else:
+#         print(A)
+
+
+# for A in range(0, 10000):
+#     for x in range(0, 1000):
+#         for y in range(0, 1000):
+#             if ((x +2*y> A) or (x <=15) or (y<=30)) == False:
+#                 break
+#         if ((x +2*y> A) or (x <=15) or (y<=30)) == False:
+#             break
+#     else:
+#         print(A)
+
+
+# def Del(n, m):
+#     return n % m == 0
+#
+#
+# for A in range(1, 1000):
+#     for x in range(1, 10000):
+#         if ((Del(x, A) and Del(x, 7)) <= (not (Del(x, 7)) or Del(x, 311))) == False:
+#             break
+#     else:
+#         print(A)
+
+
+# def Tr(n, m, k):
+#
+#     return n +m > k and n+k > m and m +k > n
+#
+#
+#
+# for A in range(1, 1000):
+#     for x in range(1, 10000):
+#         if (not ((Tr(x, 11, 24) == (not (max(x, 7) > 32))) and (Tr(x, A, 7)))) == False:
+#             break
+#     else:
+#         print(A)
+
+
+def Ug(a, b, c):
+    return (a + b + c) == 180
+
+
+for A in range(1, 1000):
+    for x in range(1, 10000):
+        if (Ug(47, A, x + 40) == (Ug(A, x, 45) and (not (A + 30 < 156)))) == False:
+            break
+    else:
+        print(A)

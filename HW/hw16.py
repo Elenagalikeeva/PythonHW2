@@ -1,15 +1,13 @@
 def decor(func):
-    def res(c,d):
-        average = c/d
-        func(c,d)
+    def res(*ars):
+        print("Среднее арифметическое чисел = ", func(*ars) / len(ars))
     return res
+
 
 @decor
 def su(*args):
-    a = sum(args)
-    b =
-    return a, b
+    print("Сумма чисел = ", sum(args))
+    return sum(args)
 
 
-
-su(2, 3, 3, 4)
+su(1, 2, 3, 4)

@@ -3730,6 +3730,3 @@ class RectBorder(Rect):
         self.b = b
         self.color = color
 
-    def show_rect(self):
-        super().show_rect()
-        print(self.a \n self.  )

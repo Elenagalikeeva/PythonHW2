@@ -3,6 +3,12 @@ class Person:
         self.__name = name
         self.__old = old
 
+    def _check_value(a):
+        if isinstance(a, int) or isinstance(a, str):
+            return True
+        return False
+
+
     @property
     def name(self):
         return self.__name
@@ -13,25 +19,29 @@ class Person:
 
     @name.setter
     def name(self, name):
-        self.__name = name
+        if Person._check_value(name):
+            self.__name = name
+
 
     @old.setter
     def old(self, old):
-        self.__old = old
+        if Person._check_value(old):
+            self.__old = old
 
     @name.deleter
     def name(self):
-        print("Удаление свойства")
         del self.__name
 
     @old.deleter
     def old(self):
-        print("Удаление свойства")
         del self.__old
 
 
-p = Person("Irina", "26")
+p = Person("Irina", 26)
+print(p.__dict__)
 p.name = "Igor"
 print(p.name)
 p.old = "31"
 print(p.old)
+del p.name
+print(p.__dict__)

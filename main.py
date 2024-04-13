@@ -3574,195 +3574,195 @@ print(Point.get_count())
 # date = Date(day, month, year)
 
 
-class Account:
-    rate_usd = 0.013
-    rate_eur = 0.011
-    suffix = "RUB"
-    suffix_usd = "USD"
-    suffix_eur = "EUR"
-
-    def __init__(self, surname, num, percent, value):
-        self.surname = surname
-        self.num = num
-        self.percent = percent
-        self.value = value
-        print(f"Счет #{self.num} принадлежащий {self.surname} был открыт.")
-        print("*" * 50)
-
-    def __del__(self):
-        print("*" * 50)
-        print(f"Счет #{self.num} принадлежащий {self.surname} был закрыт.")
-
-    @classmethod
-    def set_usd_rate(cls, rate):
-        cls.rate_usd = rate
-
-    @classmethod
-    def set_eur_rate(cls, rate):
-        cls.rate_eur = rate
-
-    @staticmethod
-    def convert(value, rate):
-        return value * rate
-
-    def convert_to_usd(self):
-        usd_val = Account.convert(self.value, Account.rate_usd)
-        print(f"Состояние счета: {usd_val} {Account.suffix_usd}.")
-
-    def convert_to_eur(self):
-        eur_val = Account.convert(self.value, Account.rate_eur)
-        print(f"Состояние счета: {eur_val} {Account.suffix_eur}.")
-
-    def edit_owner(self, surname):
-        self.surname = surname
-
-    def add_percents(self):
-        self.value += self.value * self.percent
-        print("Проценты были успешно начислены!")
-        self.print_balance()
-
-    def withdraw_money(self, val):
-        if val > self.value:
-            print(f"К сожалению у вас нет {val} {Account.suffix}")
-        else:
-            self.value -= val
-            print(f"{val} {Account.suffix} было успешно снято!")
-        self.print_balance()
-
-    def add_money(self, val):
-        self.value += val
-        print(f"{val} {Account.suffix} было успешно добавлено!")
-        self.print_balance()
-
-    def print_balance(self):
-        print(f"Текущий баланс {self.value} {Account.suffix}")
-
-    def print_info(self):
-        print("Информация о счете:")
-        print("-" * 20)
-        print(f"#{self.num}")
-        print(f"Владелец: {self.surname}")
-        self.print_balance()
-        print(f"Проценты: {self.percent:.0%}")
-        print("-" * 20)
-
-
-acc = Account("Долгих", "12345", 0.03, 1000)
-acc.print_info()
-acc.convert_to_usd()
-acc.convert_to_eur()
-print()
-
-Account.set_usd_rate(2)
-acc.convert_to_usd()
-Account.set_eur_rate(3)
-acc.convert_to_eur()
-print()
-
-acc.edit_owner("Дюма")
-acc.print_info()
-print()
-
-acc.add_percents()
-print()
-
-acc.withdraw_money(3000)
-print()
-
-acc.withdraw_money(100)
-print()
-
-acc.add_money(5000)
-print()
-
-acc.withdraw_money(3000)
-print()
-
-import re
-
-
-class UserDate:
-    def __init__(self, fio, old, ps, weight):
-        self.fio = fio
-        self.old = old
-        self.password = ps
-        self.weight = weight
-
-    @staticmethod
-    def verify_fio(fio):
-        if not isinstance(fio, str):
-            raise TypeError("ФИО должно быть строкой")
-        f = fio.split()  # ['Волков', 'Игорь', 'Николаевич']
-        if len(f) != 3:
-            raise TypeError("Неверный формат ФИО")
-        # ['В', 'о', 'л', 'к', 'о', 'в', 'И', 'г', 'о', 'р', 'ь', 'Н', 'и', 'к', 'о', 'л', 'а', 'е', 'в', 'и', 'ч']
-        letters = "".join(re.findall('[a-zа-яё-]', fio, re.IGNORECASE))  # ВолковИгорьНиколаевич
-        for s in f:
-            if len(s.strip(letters)) != 0:
-                raise TypeError("В ФИО можно использовать только буквы и дефис")
-
-    @staticmethod
-    def verify_old(old):
-        if not isinstance(old, int) or old < 14 or old > 120:
-            raise TypeError("Возраст должен быть числом в диапазоне от 14 до 120 лет")
-
-    @staticmethod
-    def verify_weight(w):
-        if not isinstance(w, float) or w < 30:
-            raise TypeError("Вес должен быть вещественным числом от 30 кг и выше")
-
-    @staticmethod
-    def verify_ps(ps):
-        if not isinstance(ps, str):
-            raise TypeError("Паспорт должен быть строкой")
-        s = ps.split()  # ['1234', '567890']
-        if len(s) != 2 or len(s[0]) != 4 or len(s[1]) != 6:
-            raise TypeError("Неверный формат паспорта")
-        for p in s:
-            if not p.isdigit():
-                raise TypeError("Серия и номер паспорта должны быть числами")
-
-    @property
-    def fio(self):
-        return self.__fio
-
-    @fio.setter
-    def fio(self, fio):
-        self.verify_fio(fio)
-        self.__fio = fio
-
-    @property
-    def old(self):
-        return self.__old
-
-    @old.setter
-    def old(self, year):
-        self.verify_old(year)
-        self.__old = year
-
-    @property
-    def password(self):
-        return self.__password
-
-    @password.setter
-    def password(self, value):
-        self.verify_ps(value)
-        self.__password = value
-
-    @property
-    def weight(self):
-        return self.__weight
-
-    @weight.setter
-    def weight(self, value):
-        self.verify_weight(value)
-        self.__weight = value
-
-
-p1 = UserDate("Волков Игорь Николаевич", 26, "1234 567890", 80.8)  # "Волков Игорь Николаевич"
-
-# p1.fio = "Соболев Игорь Николаевич"
-print(p1.__dict__)
+# class Account:
+#     rate_usd = 0.013
+#     rate_eur = 0.011
+#     suffix = "RUB"
+#     suffix_usd = "USD"
+#     suffix_eur = "EUR"
+#
+#     def __init__(self, surname, num, percent, value):
+#         self.surname = surname
+#         self.num = num
+#         self.percent = percent
+#         self.value = value
+#         print(f"Счет #{self.num} принадлежащий {self.surname} был открыт.")
+#         print("*" * 50)
+#
+#     def __del__(self):
+#         print("*" * 50)
+#         print(f"Счет #{self.num} принадлежащий {self.surname} был закрыт.")
+#
+#     @classmethod
+#     def set_usd_rate(cls, rate):
+#         cls.rate_usd = rate
+#
+#     @classmethod
+#     def set_eur_rate(cls, rate):
+#         cls.rate_eur = rate
+#
+#     @staticmethod
+#     def convert(value, rate):
+#         return value * rate
+#
+#     def convert_to_usd(self):
+#         usd_val = Account.convert(self.value, Account.rate_usd)
+#         print(f"Состояние счета: {usd_val} {Account.suffix_usd}.")
+#
+#     def convert_to_eur(self):
+#         eur_val = Account.convert(self.value, Account.rate_eur)
+#         print(f"Состояние счета: {eur_val} {Account.suffix_eur}.")
+#
+#     def edit_owner(self, surname):
+#         self.surname = surname
+#
+#     def add_percents(self):
+#         self.value += self.value * self.percent
+#         print("Проценты были успешно начислены!")
+#         self.print_balance()
+#
+#     def withdraw_money(self, val):
+#         if val > self.value:
+#             print(f"К сожалению у вас нет {val} {Account.suffix}")
+#         else:
+#             self.value -= val
+#             print(f"{val} {Account.suffix} было успешно снято!")
+#         self.print_balance()
+#
+#     def add_money(self, val):
+#         self.value += val
+#         print(f"{val} {Account.suffix} было успешно добавлено!")
+#         self.print_balance()
+#
+#     def print_balance(self):
+#         print(f"Текущий баланс {self.value} {Account.suffix}")
+#
+#     def print_info(self):
+#         print("Информация о счете:")
+#         print("-" * 20)
+#         print(f"#{self.num}")
+#         print(f"Владелец: {self.surname}")
+#         self.print_balance()
+#         print(f"Проценты: {self.percent:.0%}")
+#         print("-" * 20)
+#
+#
+# acc = Account("Долгих", "12345", 0.03, 1000)
+# acc.print_info()
+# acc.convert_to_usd()
+# acc.convert_to_eur()
+# print()
+#
+# Account.set_usd_rate(2)
+# acc.convert_to_usd()
+# Account.set_eur_rate(3)
+# acc.convert_to_eur()
+# print()
+#
+# acc.edit_owner("Дюма")
+# acc.print_info()
+# print()
+#
+# acc.add_percents()
+# print()
+#
+# acc.withdraw_money(3000)
+# print()
+#
+# acc.withdraw_money(100)
+# print()
+#
+# acc.add_money(5000)
+# print()
+#
+# acc.withdraw_money(3000)
+# print()
+#
+# import re
+#
+#
+# class UserDate:
+#     def __init__(self, fio, old, ps, weight):
+#         self.fio = fio
+#         self.old = old
+#         self.password = ps
+#         self.weight = weight
+#
+#     @staticmethod
+#     def verify_fio(fio):
+#         if not isinstance(fio, str):
+#             raise TypeError("ФИО должно быть строкой")
+#         f = fio.split()  # ['Волков', 'Игорь', 'Николаевич']
+#         if len(f) != 3:
+#             raise TypeError("Неверный формат ФИО")
+#         # ['В', 'о', 'л', 'к', 'о', 'в', 'И', 'г', 'о', 'р', 'ь', 'Н', 'и', 'к', 'о', 'л', 'а', 'е', 'в', 'и', 'ч']
+#         letters = "".join(re.findall('[a-zа-яё-]', fio, re.IGNORECASE))  # ВолковИгорьНиколаевич
+#         for s in f:
+#             if len(s.strip(letters)) != 0:
+#                 raise TypeError("В ФИО можно использовать только буквы и дефис")
+#
+#     @staticmethod
+#     def verify_old(old):
+#         if not isinstance(old, int) or old < 14 or old > 120:
+#             raise TypeError("Возраст должен быть числом в диапазоне от 14 до 120 лет")
+#
+#     @staticmethod
+#     def verify_weight(w):
+#         if not isinstance(w, float) or w < 30:
+#             raise TypeError("Вес должен быть вещественным числом от 30 кг и выше")
+#
+#     @staticmethod
+#     def verify_ps(ps):
+#         if not isinstance(ps, str):
+#             raise TypeError("Паспорт должен быть строкой")
+#         s = ps.split()  # ['1234', '567890']
+#         if len(s) != 2 or len(s[0]) != 4 or len(s[1]) != 6:
+#             raise TypeError("Неверный формат паспорта")
+#         for p in s:
+#             if not p.isdigit():
+#                 raise TypeError("Серия и номер паспорта должны быть числами")
+#
+#     @property
+#     def fio(self):
+#         return self.__fio
+#
+#     @fio.setter
+#     def fio(self, fio):
+#         self.verify_fio(fio)
+#         self.__fio = fio
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, year):
+#         self.verify_old(year)
+#         self.__old = year
+#
+#     @property
+#     def password(self):
+#         return self.__password
+#
+#     @password.setter
+#     def password(self, value):
+#         self.verify_ps(value)
+#         self.__password = value
+#
+#     @property
+#     def weight(self):
+#         return self.__weight
+#
+#     @weight.setter
+#     def weight(self, value):
+#         self.verify_weight(value)
+#         self.__weight = value
+#
+#
+# p1 = UserDate("Волков Игорь Николаевич", 26, "1234 567890", 80.8)  # "Волков Игорь Николаевич"
+#
+# # p1.fio = "Соболев Игорь Николаевич"
+# print(p1.__dict__)
 
 
 # class Point:  # (object)
@@ -4169,96 +4169,96 @@ print(p1.__dict__)
 
 # Вложенные классы
 
-class MyOuter:
-    age = 18
-
-    def __init__(self, name):
-        self.name = name
-
-    @staticmethod
-    def outer_method():
-        print("outer_method")
-
-    def instance_method(self):
-        print("instance_method")
-
-    class MyInner:
-        def __init__(self, inner_name, obj):
-            self.inner_name = inner_name
-            self.obj = obj
-
-        def inner_method(self):
-            print("Вложенный метод", MyOuter.age, self.obj.name)
-            MyOuter.outer_method()
-            self.obj.instance_method()
-
-
-out = MyOuter('внешний')
-print(out.name)
-inner = out.MyInner('внутренний', out)
-print(inner.inner_name)
-inner.inner_method()
-
-class DarkGreen:
-    def __init__(self):
-        self.name = "Dark Green"
-
-    def display(self):
-        print("Name:", self.name)
-
-
-class Color:
-    def __init__(self):
-        self.name = "Green"
-        self.lg = self.LightGreen()
-        self.dg = DarkGreen()
-
-    def show(self):
-        print("Name:", self.name)
-
-    class LightGreen:
-        def __init__(self):
-            self.name = "Light Green"
-
-        def display(self):
-            print("Name:", self.name)
-
-
-outer = Color()
-outer.show()
-g = outer.lg
-g.display()
-g2 = outer.dg
-g2.display()
-print(g2.name)
-
-class Computer:
-    def __init__(self):
-        self.name = "PC001"
-        # self.os = self.OS()
-        # self.cpu = self.CPU()
-
-    class OS:
-        def system(self):
-            return "Windows 10"
-
-    class CPU:
-        def make(self):
-            return "Intel"
-
-        def model(self):
-            return "Core-i7"
-
-
-comp = Computer()
-my_os = comp.os
-my_cpu = comp.cpu
-my_os = Computer().OS()
-my_cpu = Computer().CPU()
-print(comp.name)
-print(my_os.system())
-print(my_cpu.make())
-print(my_cpu.model())
+# class MyOuter:
+#     age = 18
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     @staticmethod
+#     def outer_method():
+#         print("outer_method")
+#
+#     def instance_method(self):
+#         print("instance_method")
+#
+#     class MyInner:
+#         def __init__(self, inner_name, obj):
+#             self.inner_name = inner_name
+#             self.obj = obj
+#
+#         def inner_method(self):
+#             print("Вложенный метод", MyOuter.age, self.obj.name)
+#             MyOuter.outer_method()
+#             self.obj.instance_method()
+#
+#
+# out = MyOuter('внешний')
+# print(out.name)
+# inner = out.MyInner('внутренний', out)
+# print(inner.inner_name)
+# inner.inner_method()
+#
+# class DarkGreen:
+#     def __init__(self):
+#         self.name = "Dark Green"
+#
+#     def display(self):
+#         print("Name:", self.name)
+#
+#
+# class Color:
+#     def __init__(self):
+#         self.name = "Green"
+#         self.lg = self.LightGreen()
+#         self.dg = DarkGreen()
+#
+#     def show(self):
+#         print("Name:", self.name)
+#
+#     class LightGreen:
+#         def __init__(self):
+#             self.name = "Light Green"
+#
+#         def display(self):
+#             print("Name:", self.name)
+#
+#
+# outer = Color()
+# outer.show()
+# g = outer.lg
+# g.display()
+# g2 = outer.dg
+# g2.display()
+# print(g2.name)
+#
+# class Computer:
+#     def __init__(self):
+#         self.name = "PC001"
+#         # self.os = self.OS()
+#         # self.cpu = self.CPU()
+#
+#     class OS:
+#         def system(self):
+#             return "Windows 10"
+#
+#     class CPU:
+#         def make(self):
+#             return "Intel"
+#
+#         def model(self):
+#             return "Core-i7"
+#
+#
+# comp = Computer()
+# my_os = comp.os
+# my_cpu = comp.cpu
+# my_os = Computer().OS()
+# my_cpu = Computer().CPU()
+# print(comp.name)
+# print(my_os.system())
+# print(my_cpu.make())
+# print(my_cpu.model())
 
 
 # class Cat:
@@ -4499,96 +4499,96 @@ print(my_cpu.model())
 
 # 24 * 60 * 60 = 86400  - число секунд в одном дне
 
-# class Clock:
-#     __DAY = 86400
-#
-#     def __init__(self, sec: int):
-#         if not isinstance(sec, int):
-#             raise ValueError("Секунды должны быть целым числом")
-#         self.sec = sec % self.__DAY
-#
-#     def get_format_time(self):
-#         s = self.sec % 60
-#         m = (self.sec // 60) % 60
-#         h = (self.sec // 3600) % 24
-#         return f"{Clock.get_form(h)}:{Clock.get_form(m)}:{Clock.get_form(s)}"
-#
-#     @staticmethod
-#     def get_form(x):
-#         return str(x) if x > 9 else "0" + str(x)
-#
-#     # def __add__(self, other):
-#     #     if not isinstance(other, Clock):
-#     #         raise ArithmeticError("Правый операнд должен быть типом Clock")
-#     #     return Clock(self.sec + other.sec)
-#     #
-#     # def __eq__(self, other):
-#     #     if not isinstance(other, Clock):
-#     #         raise ArithmeticError("Правый операнд должен быть типом Clock")
-#     #     if self.sec == other.sec:
-#     #         return True
-#     #     return False
-#     #
-#     # def __ne__(self, other):
-#     #     return not self.__eq__(other)
-#     def __getitem__(self, item):
-#         if not isinstance(item, str):
-#             raise ValueError("Ключ должен быть строкой")
-#
-#         if item == "hour":
-#             return (self.sec // 3600) % 24
-#         elif item == "min":
-#             return (self.sec // 60) % 60
-#         elif item == "sec":
-#             return self.sec % 60
-#         return "Неверный ключ"
-#
-#     def __setitem__(self, key, value):
-#         if not isinstance(key, str):
-#             raise ValueError("Ключ должен быть строкой")
-#
-#         if not isinstance(value, int):
-#             raise ValueError("Значение должно быть целым числом")
-#
-#         s = self.sec % 60
-#         m = (self.sec // 60) % 60
-#         h = (self.sec // 3600) % 24
-#
-#         if key == "hour":
-#             self.sec = s + 60 * m + value * 3600
-#         if key == "min":
-#             self.sec = s + 60 * value + h * 3600
-#         if key == "sec":
-#             self.sec = value + 60 * m + h * 3600
-#
-#
-# c1 = Clock(80000)
-# print(c1.get_format_time())
-# c1["hour"] = 11
-# c1["min"] = 24
-# c1["sec"] = 59
-# print(c1["hour"], c1["min"], c1["sec"])
-# print(c1.get_format_time())
+class Clock:
+    __DAY = 86400
 
-# c1 = Clock(100)
-# c2 = Clock(200)
-# # c4 = Clock(300)
-# print(c1.get_format_time())
-# print(c2.get_format_time())
-# # print(c4.get_format_time())
-# # c3 = c1 + c2 + c4
-# # print(c3.get_format_time())
-# # c1 += c2
-# # print(c1.get_format_time())
-# # if c1 == c2:
-# #     print("Время равно")
-# # else:
-# #     print("Время разное")
-#
-# if c1 != c2:
-#     print("Время разное")
-# else:
-#     print("Время равно")
+    def __init__(self, sec: int):
+        if not isinstance(sec, int):
+            raise ValueError("Секунды должны быть целым числом")
+        self.sec = sec % self.__DAY
+
+    def get_format_time(self):
+        s = self.sec % 60
+        m = (self.sec // 60) % 60
+        h = (self.sec // 3600) % 24
+        return f"{Clock.get_form(h)}:{Clock.get_form(m)}:{Clock.get_form(s)}"
+
+    @staticmethod
+    def get_form(x):
+        return str(x) if x > 9 else "0" + str(x)
+
+    def __add__(self, other):
+        if not isinstance(other, Clock):
+            raise ArithmeticError("Правый операнд должен быть типом Clock")
+        return Clock(self.sec + other.sec)
+
+    def __eq__(self, other):
+        if not isinstance(other, Clock):
+            raise ArithmeticError("Правый операнд должен быть типом Clock")
+        if self.sec == other.sec:
+            return True
+        return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+    def __getitem__(self, item):
+        if not isinstance(item, str):
+            raise ValueError("Ключ должен быть строкой")
+
+        if item == "hour":
+            return (self.sec // 3600) % 24
+        elif item == "min":
+            return (self.sec // 60) % 60
+        elif item == "sec":
+            return self.sec % 60
+        return "Неверный ключ"
+
+    def __setitem__(self, key, value):
+        if not isinstance(key, str):
+            raise ValueError("Ключ должен быть строкой")
+
+        if not isinstance(value, int):
+            raise ValueError("Значение должно быть целым числом")
+
+        s = self.sec % 60
+        m = (self.sec // 60) % 60
+        h = (self.sec // 3600) % 24
+
+        if key == "hour":
+            self.sec = s + 60 * m + value * 3600
+        if key == "min":
+            self.sec = s + 60 * value + h * 3600
+        if key == "sec":
+            self.sec = value + 60 * m + h * 3600
+
+
+c1 = Clock(80000)
+print(c1.get_format_time())
+c1["hour"] = 11
+c1["min"] = 24
+c1["sec"] = 59
+print(c1["hour"], c1["min"], c1["sec"])
+print(c1.get_format_time())
+
+c1 = Clock(100)
+c2 = Clock(200)
+c4 = Clock(300)
+print(c1.get_format_time())
+print(c2.get_format_time())
+print(c4.get_format_time())
+c3 = c1 + c2 + c4
+print(c3.get_format_time())
+c1 += c2
+print(c1.get_format_time())
+if c1 == c2:
+    print("Время равно")
+else:
+    print("Время разное")
+
+if c1 != c2:
+    print("Время разное")
+else:
+    print("Время равно")
 
 
 # class Student:

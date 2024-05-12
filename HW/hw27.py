@@ -74,13 +74,6 @@ class Triangle(Shape):
         return round((self.perim() / 2 * (self.perim() / 2 - self.a) * (self.perim() / 2 - self.b) *
                       (self.perim() / 2 - self.c)) ** (1 / 2), 2)
 
-        def ris(self):
-            while i >= 1:
-
-
-            # for i in range(self.b):
-            #     print(self.b * "*")
-
     def info(self):
         print("===Треугольник===")
         print("Сторона 1:", self.a)
@@ -90,6 +83,11 @@ class Triangle(Shape):
         print("Периметр:", self.perim())
         print("Площадь:", self.plo())
         self.ris()
+
+    def ris(self):
+        for i in range(self.a):
+            print(self.b * "*")
+
 
 
 s = Square(3, b=None, c=None, color="red")

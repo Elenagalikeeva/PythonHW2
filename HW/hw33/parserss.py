@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import csv
 
 
 class Parsers:
@@ -28,12 +29,18 @@ class Parsers:
 
     def save(self):
         with open(self.path, "w") as f:
+            writer = csv.writer(f, delimiter=";", lineterminator="\r")
+            writer.writerow(["Раздел: ", "Ссылка", "Название"])
             x = 1
             for i in self.res:
-                f.write(f"Новость № {x}\n\nРаздел: {i['chapter']}\n"
-                        f"Ссылка: {i['href']}\n"
-                        f"Название: {i['title']}\n\n{'*' * 40}\n")
+                writer.writerow(["['chapter']",['href']}\n"
+                                f"Название: {i['title']}\n\n{'*' * 40}\n")
                 x += 1
+
+    # f"Новость № {x}\n\nРаздел: {i['chapter']}\n"
+    # f"Ссылка: {i['href']}\n"
+    # f"Название: {i['title']}\n\n{'*' * 40}\n")
+    # x += 1
 
     def run(self):
         self.get_html()

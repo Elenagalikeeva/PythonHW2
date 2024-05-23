@@ -4807,8 +4807,6 @@
 #     i.info()
 
 
-
-
 # Функторы
 
 
@@ -5200,7 +5198,6 @@
 #     e_car.description_battery()
 
 
-
 # class Employee:
 #     def __init__(self, kod, name):
 #         self.id = kod
@@ -5367,6 +5364,7 @@
 
 
 import json
+import socket
 from random import choice
 
 
@@ -5887,16 +5885,16 @@ for i in range(5):
 #     main()
 
 
-from parsers import Parser
-
-
-def main():
-    pars = Parser("https://www.ixbt.com/live/index/news/", "news.txt")
-    pars.run()
-
-
-if __name__ == '__main__':
-    main()
+# from parsers import Parser
+#
+#
+# def main():
+#     pars = Parser("https://www.ixbt.com/live/index/news/", "news.txt")
+#     pars.run()
+#
+#
+# if __name__ == '__main__':
+#     main()
 
 # MVC
 # Model - модель
@@ -5907,6 +5905,25 @@ if __name__ == '__main__':
 # Сокеты:
 # Серверный
 # Клиентский
+
+
+# import socket
+#
+#
+# def run():
+#     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#     server_socket.bind(('127.0.0.1', 5000))
+#     server_socket.listen()
+#
+#     while True:
+#         client_socket, addr = server_socket.accept()
+#         request = client_socket.recv(1024)
+#         print(f"Client: {addr} => \n{request}\n")
+#
+#
+# if __name__ == "__main__":
+#     run()
+
 
 # import socket
 # from view import index, blog
@@ -5966,9 +5983,8 @@ if __name__ == '__main__':
 #     run()
 
 
-import sqlite3
-
-
+# import sqlite3
+#
 # con = sqlite3.connect("profile.db")
 # cur = con.cursor()
 # cur.execute("""""")
@@ -5982,7 +5998,6 @@ import sqlite3
 #     summa REAL,
 #     date BLOB)""")
 #     cur.execute("DROP TABLE users")
-
 
 
 

@@ -1,8 +1,9 @@
 from parserss import Parsers
+import csv
 
 
 def main():
-    pars = Parsers("https://news.mail.ru", "newss.txt")
+    pars = Parsers("https://news.mail.ru", "newss.csv")
     pars.run()
 
 

@@ -1226,6 +1226,478 @@ def LOSS1(s):
 # print(len(start_lenta) - 1)
 
 
+# f = open("")
+# n = int(f.readline())
+# data = []
+# for s in f:
+#     start, end = map(int, s.split())
+#     data.append([end, start])
+# data.sort()
+# zal = 0
+# podoshel = []
+# for end, start in data:
+#     if start >= zal:
+#         zal = end
+#         podoshel.append([start, end])
+#     if start >= 1379:
+#         print(start, end)
+# print(len(podoshel), podoshel)
+
+
+# f = open("")
+# n = int(f.readline())
+# data = []
+# for s in f:
+#     ryad, mesto = map(int, s.split())
+#     if [ryad, mesto] not in data:
+#         data.append([ryad, mesto])
+# data.sort()
+# cur = 1
+# for i in range(1, len(data)):
+#     if (data[i][0] == data[i - 1][0]) and \
+#             (data[i][1] - data[i - 1][1]) == 1:
+#         cur += 1
+#         print(cur, data[i])
+#     else:
+#         cur = 1
+
+
+# f = open("26")
+# n = int(f.readline())
+# data = []
+# for s in f:
+#     ryad, mesto = map(int, s.split())
+#     data.append([ryad, mesto])
+# data.sort()
+# for i in range(1, len(data)):
+#     if (data[i][0] == data[i-1][0]) and (data[i][1] - data[i-1][1]) == 4:
+#         print(data[i], data[i-1])
+
+
+# 9, 15, 4
+
+# def to_base5(x):
+#     s = ""
+#     while x > 0:
+#         s += str(x % 5)
+#         x = x // 5
+#     return s[::-1]
+#
+#
+# a = []
+# for n in range(1, 10000):
+#     n5 = to_base5(n)
+#     if n % 7 == 0:
+#         n5 = n5[:4] + n5 + "0" * (4 - len(n5)) + n5[-4:]
+#     else:
+#         n5 += bin((n % 7) * 2)[2:]
+#     r = int(n5, 5)
+#     if r > 1000 and r % 760 == 0:
+#         a.append(r)
+# print(min(a))
+
+
+# def is_prostoe(x):
+#     for i in range(2, x):
+#         if x % i == 0:
+#             return False
+#     return x > 1
+#
+#
+# from math import prod
+#
+# f = open("17")
+# a = [int(s) for s in f]
+# pyaterki = []
+# for i in range(len(a) - 4):
+#     if sum([1 for x in a[i:i + 5] if is_prostoe(x)]) == 2 and \
+#             sum([1 for x in a[i: i + 5] if x ** 0.5 % 1 == 0]) >= 3:
+#         pr = prod(a[i:i + 5])
+#         pyaterki.append(sum(map(int, str(pr))))
+# print(len(pyaterki), max(pyaterki))
+
+
+# def tr(x):
+#     s = ""
+#     while x > 0:
+#         s += str(x % 3)
+#         x = x // 3
+#     return s[::-1]
+#
+#
+# for n in range(1, 10000):
+#     n3 = tr(n)
+#     if n % 3 == 0:
+#         n3 = n3 + n3[-3:]
+#     else:
+#         n3 = n3 + tr((n % 3) * 3)
+#     r = int(n3, 3)
+#     if r > 344:
+#         print(n)
+#         break
+
+# from string import *
+#
+# alph = "0123456789ABCDEFGHIJ"
+# for x in alph:
+#     if (int(f"13{x}CF", 20) + int(f"47GH{x}", 20)) % 19 == 0:
+#         print((int(f"13{x}CF", 20) + int(f"47GH{x}", 20)) // 19)
+
+
+# a = hex(16 ** 161 - 16 ** 61 - 16 ** 6)[2:]
+# print(a)
+# cnt = 0
+# for i in a:
+#     if "f" in str(a):
+#         cnt += 1
+# print(cnt)
+
+
+# def to_base_39(number):
+#     characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabc"
+#
+#     base = 39
+#
+#     result = ""
+#
+#     while number > 0:
+#         remainder = number % base
+#
+#         result = characters[remainder] + result
+#
+#         number //= base
+#
+#     return result
+#
+#
+# def from_base_39(number):
+#     characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabc"
+#
+#     base = 39
+#
+#     result = 0
+#
+#     for i, char in enumerate(reversed(number)):
+#         value = characters.index(char)
+#
+#         result += value * (base ** i)
+#
+#     return result
+#
+#
+# def R(n):
+#     n1 = str(to_base_39(n))
+#
+#     if n % 13 == 0:
+#         n1 = "222" + n1 + "32F"
+#
+#     else:
+#         n1 += to_base_39((n % 123) * 58)
+#
+#     return from_base_39(n1)
+#
+#
+# for i in range(1, 100000):
+#
+#     if R(i) < 100_000:
+#         print(i, R(i))
+
+
+# alph = "0123456789ABCD"
+# for x in alph:
+#     for y in alph:
+#         if (int(f"ABCD3{y}2{x}1", 14) + int(f"192{x}9", 14)) % 107 == 0:
+#             print((int(f"ABCD3{y}2{x}1", 14) + int(f"192{x}9", 14)) // 107)
+
+# from string import *
+#
+# alph = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[:23]
+# for x in alph:
+#     for y in alph:
+#         if (int(f"13{y}{x}9", 23) + int(f"22{y}22", 23)) % 2 == 0:
+#             y = 6
+#             print((int(f"13{y}{x}9", 23) + int(f"22{y}22", 23)) // 18)
+
+
+# f = open("26")
+# a = [int(s) for s in f]
+# min_el = min([i for i in a if str(abs(i))[-3:] == "600"])
+# troy = []
+# for i in range(len(a) - 2):
+#     if (int((len(str(abs(a[i]))) == 5)) + int((len(str(abs(a[i + 1])))== 5)) + int((len(str(abs(a[i + 2]))) == 5))) <= 2\
+#             and (a[i] + a[i + 1] + a[i + 2]) >= min_el:
+#         troy.append(a[i] + a[i + 1] + a[i + 2])
+# print(len(troy), min(troy))
+
+
+# f = open("26")
+# a = [int(s) for s in f]
+# max_el = max([x for x in a if str(x)[-2:] == "11"])
+# res = []
+# for i in range(len(a) - 1):
+#     if str(oct(a[i]))[-1] == str(oct(a[i + 1]))[-1] and \
+#             ((a[i] % 5 == 0 and a[i + 1] % 7 == 0 and a[i] % 35 !=0 and a[i+1] % 35 !=0)
+#              or (a[i + 1] % 5 == 0 and a[i] % 7 == 0 and a[i] % 35 !=0 and a[i+1] % 35 !=0)) and \
+#             (a[i] ** 2 + a[i + 1] ** 2) <= max_el ** 2:
+#         res.append(a[i] + a[i + 1])
+# print(len(res), min(res))
+
+
+# print("x y z w F")
+# for F in range(2):
+#     for x in range(2):
+#         for y in range(2):
+#             for z in range(2):
+#                 for w in range(2):
+#                     if (((y <= x) == (w <= (not (z)))) and (w or x)) == F:
+#                         print(x, y, z, w, F)
+
+
+# for n in range(1, 1000):
+#     n2 = bin(n)[2:]
+#     if n2.count("1") % 2 == 0:
+#         n22 = n2[2:]
+#         n22 = "10" + n22 + "0"
+#
+#     else:
+#         n22 = n2[2:]
+#         n22 = "11" + n22 + "1"
+#
+#     r = int(n22, 2)
+#     if r >= 26:
+#         print(n)
+
+# from turtle import *
+# k = 10
+# left(90)
+# pendown()
+# right(90)
+# for i in range(3):
+#     right(45)
+#     forward(15*k)
+#     right(45)
+# right(315)
+# forward(15*k)
+# for i in range(2):
+#     right(90)
+#     forward(15*k)
+# penup()
+# for x in range(50*k, -50*k, k):
+#     for y in range(50*k, -50*k, k):
+#         goto(x*k,y*k)
+#         dot(3)
+# done()
+
+
+# f = open("9")
+# a = [int(s) for s in f]
+# for i in range(len(a) - 6):
+#     if a[i]
+
+
+# a = "2" * 2022 + "4" * 2023
+# while "222" in a:
+#     a.replace("222", "3", 1)
+#     a.replace("333", "4", 1)
+#     a.replace("444", "2", 1)
+# print(a)
+
+# from string import *
+# alph = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[:16]
+# for x in alph:
+#     if (int(f"D49{x}1", 16) + int(f"48A3{x}", 16)) % 14 == 0:
+#         print((int(f"D49{x}1", 16) + int(f"48A3{x}", 16)) // 14)
+
+
+# def Del(n, m):
+#     return n % m == 0
+#
+#
+# for A in range(1, 1000):
+#     for x in range(1, 1000):
+#         if ((Del(x, 2) <= (not (Del(x, 5)))) or (x + A >= 90)) == 1:
+#             print(A)
+
+
+# def Del(n, m):
+#     return n % m == 0
+#
+#
+# for A in range(1, 1000):
+#     for x in range(1, 1000):
+#         if (not (Del(x, A)) <= (Del(x, 6) <= (not (Del(x, 4))))) == 1:
+#             print(A)
+
+
+# def F(n):
+#     if n < 3:
+#         return 1
+#     if n > 2 and n % 2 == 0:
+#         return F(n - 1) + n - 1
+#     if n > 2 and n % 2 != 0:
+#         return F(n - 2) + 2 * n - 2
+#
+#
+# print(F(31))
+
+
+# f = open("17")
+# a = [int(s) for s in f]
+# para = []
+# min_el = min([x for x in a if x % 6 == 0])
+# for i in range(len(a) - 1):
+#     if a[i] % min_el == 0 and a[i+1] % min_el == 0:
+#         para.append(a[i] + a[i+1])
+# print(len(para), max(para))
+
+
+# def task(start, end):
+#     if start > end:
+#         return 0
+#     if start == end:
+#         return 1
+#     if start < end:
+#         return task(start + 2, end) + task(start * 2, end)
+#
+#
+# print(task(1, 24) * task(24, 50))
+
+# def task(start, end, k):
+#     if start > end or (start == end and k < 2):
+#         return 0
+#     if start == end and k == 2:
+#         return 1
+#     if k == 2:
+#         return task(start + 2, end, k) + task(start + 3, end, k)
+#     if k < 2:
+#         return task(start + 2, end, k) + task(start + 3, end, k) + task(start * 2, end, k + 1) + \
+#             task(start * 3, end, k + 1)
+#
+#
+# print(task(1, 51, 0))
+
+
+# f = open("24")
+# a = [s for s in f]
+# cnt = 0
+# if "BA" in a:
+#     cnt += 1
+# print(cnt)
+# # or "DA" in a or "BADA" in a
+
+
+# f = open("10")
+# cnt = 0
+# for s in f:
+#     a = list(map(int, s.split()))
+#     povt = [x for x in a if a.count(x) > 1]
+#     ne_povt = [x for x in a if a.count(x) == 1]
+#
+#     if len(povt) == 2:
+#         if all(x % 2 != 0 for x in povt) and all(x % 2 == 0 for x in ne_povt):
+#             cnt += 1
+#
+# print(cnt)
+
+
+# from math import prod
+# f = open('10')
+# cnt = 0
+# for s in f:
+#     a = list(map(int, s.split()))
+#     povt = [x for x in a if a.count(x) > 1]
+#     ne_povt = [x for x in a if a.count(x)== 1]
+#     if len(povt) == 2:
+#         pr = prod(povt)
+#         pr2 = sum(map(int, str(pr)))
+#         if str(oct(pr2**2))[-1] == "0":
+#             cnt += 1
+# print(cnt)
+
+
+# f = open("10")
+# cnt = 0
+# for s in f:
+#     a = list(map(int, s.split()))
+#     povt = [x for x in a if a.count(x) > 1]
+#     ne_povt = [x for x in a if a.count(x) == 1]
+#     min_el = min([x for x in a])
+#     if len(povt) == 4:
+#         if min_el in povt:
+#             cnt += 1
+# print(cnt)
+
+
+# f = open("266")
+# n = int(f.readline())
+# data = []
+#
+# for s in f:
+#     ryad, mesto = map(int, s.split())
+#     if [ryad, mesto] not in data:
+#         data.append([ryad, mesto])
+# data.sort()
+# cnt = 1
+# for i in range(1, len(data)-3):
+#     if (data[i][0] == data[i - 1][0]) and (data[i][1] - data[i - 1][1]) == 4:
+#         cnt += 1
+#         print(cnt, data[i])
+#     else:
+#         cnt = 1
+
+
+# f = open("")
+# n = int(f.readline())
+# data = []
+# for s in f:
+#     ryad, mesto = map(int, s.split())
+#     if [ryad, mesto] not in data:
+#         data.append([ryad, mesto])
+# data.sort()
+# cur = 1
+# for i in range(1, len(data)):
+#     if (data[i][0] == data[i - 1][0]) and \
+#             (data[i][1] - data[i - 1][1]) == 1:
+#         cur += 1
+#         print(cur, data[i])
+#     else:
+#         cur = 1
+
+
+# f = open("266")
+# n = int(f.readline())
+# data = []
+# cur = 1
+# for s in f:
+#     ryad, mesto = map(int, s.split())
+#     if [ryad, mesto] not in data:
+#         data.append([ryad, mesto])
+# data.sort()
+# for i in range(1, len(data)):
+#     if (data[i][0] == data[i - 1][0]) and (data[i][1] - data[i - 1][1]) == 6:
+#         cur += 1
+#         print(cur, data[i])
+#     else:
+#         cur = 1
+
+
+# f = open("266")
+# n = int(f.readline())
+# data = []
+# for s in f:
+#     start, end = map(int, s.split())
+#     data.append([end, start])
+# data.sort()
+# zal = 0
+# podoshel = []
+# for end, start in data:
+#     if start >= zal:
+#         zal = end
+#         podoshel.append([start, end])
+#     if start >= 1338:
+#         print(start, end)
+# print(len(podoshel))
+
 
 # f = open("")
 # n = int(f.readline())
@@ -1243,3 +1715,180 @@ def LOSS1(s):
 #     if start >= 1379:
 #         print(start, end)
 # print(len(podoshel), podoshel)
+
+
+# f = open("266")
+# n = int(f.readline())
+# start = []
+# end = []
+# for i in range(n):
+#     shlif, okr = map(int, f.readline().split())
+#
+#     if shlif < okr:
+#         start.append([shlif, i +1])
+#     if shlif > okr:
+#         end.append([okr, i +1])
+# print(max(start), max(end))
+# print(len(start))
+
+
+# f = open("")
+# n = int(f.readline())
+# start_lenta = []
+# end_lenta = []
+# for i in range(n):
+#     shlif, okr = map(int, f.readline().split())
+#     if shlif < okr:
+#         start_lenta.append([shlif, i + 1])
+#     if okr > shlif:
+#         end_lenta.append([okr, i + 1])
+# start_lenta.sort()
+# end_lenta.sort()
+# print(max(start_lenta), max(end_lenta))
+# print(len(start_lenta) - 1)
+#
+#
+
+
+# 25
+
+# from fnmatch import *
+# for x in range(0, 10**8, 61):
+#     if fnmatch(str(x), "23456??8"):
+#         print(x, x // 61)
+
+
+# from fnmatch import *
+#
+# for x in range(0, 10 ** 8, 63):
+#     if fnmatch(str(x), "134?3?"):
+#         print(x, x // 63)
+
+
+# from fnmatch import *
+# a = []
+# for x in range(0, 10**8, 2023):
+#     if fnmatch(str(x), "37*87?"):
+#         a.append([x, x // 2023])
+# a.sort()
+# print(a)
+
+
+# from re import *
+# for x in range(0, 10**8, 123):
+#     if fullmatch(r"154\d8\d", str(x)):
+#         print(x, x // 123)
+
+
+# from re import *
+# for x in range(0, 10**8, 193):
+#     if fullmatch(r"64\d*32\d2", str(x)):
+#         print(x, x // 193)
+
+
+# for x in range(123456, 123487+1):
+#     deliteli = []
+#     for d in range(1, x +1):
+#         if x % d ==0:
+#             deliteli.append(d)
+#     if len(deliteli) == 6:
+#         print(deliteli)
+
+
+# for x in range(15545, 15844 + 1):
+#     deliteli = []
+#     for d in range(2, x):
+#         if x % d == 0:
+#             deliteli.append(d)
+#     if len(deliteli) == 5:
+#         print(x, max(deliteli))
+
+
+# for x in range(950000, 950000+100000):
+#     F = 0
+#     deliteli = []
+#     for d in range(2, x):
+#         if x % d == 0:
+#             deliteli.append(d)
+#     if deliteli:
+#         F = max(deliteli) - min(deliteli)
+#         if F !=0 and F % 13 == 0:
+#             print(x, F)
+
+# cnt = 0
+# for x in range(800001, 800001 + 10000):
+#     for d in range(111, x, 100):
+#         if x % d == 0 and str(d)[-2:] == "11":
+#             print(x, d)
+#             cnt += 1
+#     if cnt == 5:
+#         break
+
+
+# def is_prime(n):
+#     for i in range(2, n):
+#         if n % i == 0:
+#             return False
+#     return n > 1
+#
+# for x in range(1_000_001, 1_000_001 +10_000):
+#     deliteli = []
+#     for d in range(2, x):
+#         if x % d == 0:
+#             deliteli.append(d)
+#     if deliteli and is_prime(max(deliteli)):
+#         print(x, max(deliteli))
+
+
+# for x in range(800_001, 800_001 + 1000):
+#     F = 0
+#     deliteli = []
+#     for d in range(2, x):
+#         if x % d == 0:
+#             deliteli.append(d)
+#
+#     if deliteli:
+#         deliteli.sort()
+#         F = deliteli[0] * deliteli[-2]
+#
+#     if F != 0 and F % (deliteli[0] + deliteli[1]) == 0:
+#         print(x, F)
+
+
+# f = open("")
+# s = f.readline()
+# a = s.split("R")
+# print(len(max(a, key=len)))
+
+
+# f = open("")
+# s = f.readline()
+# s = s.replace("U", "A")
+# s = s.replace("T", "R")
+# s = s.replace("S", "R")
+# for i in range(100):
+#     if "AR" * i in s:
+#         print(i)
+
+
+
+# f = open("")
+# s = f.readline()
+# s = s.replace("FGN", "*")
+# s = s.replace("GFN", "*")
+# for i in range(100):
+#     if "*" * i in s:
+#         print(i)
+
+
+# f = open("")
+# s = f.readline()
+# s = s.replace("FJW", "FJ JW")
+# s = s.replace("FJ", "JW")
+# for i in range(100):
+#     if "JW" * i in s:
+#         print(i)
+
+
+
+

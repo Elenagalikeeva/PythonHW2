@@ -26,7 +26,7 @@ class Rtriangle(Pair):
 
     def info(self):
         self.gip()
-        print("Прямоугольный треугольник АВС (5, 8, 9.43)")
+        print("Прямоугольный треугольник АВС (5, 8, 9var.43)")
         self.pl()
 
 

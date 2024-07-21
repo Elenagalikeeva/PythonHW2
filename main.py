@@ -4,7 +4,7 @@
 # print(age)
 
 # a = b = c = 5
-# a, b, c = 7, 'Hello', 9.8
+# a, b, c = 7, 'Hello', 9var.8
 
 # PI = 3.14
 # print(PI)
@@ -58,12 +58,12 @@
 # print(bool(None))  # null
 
 
-# print(2 < 4 < 9)
-# print(2 < 4 > 9)  # t : f = f
+# print(2 < 4 < 9var)
+# print(2 < 4 > 9var)  # t : f = f
 # print(2==2 and 1+3==4)  # true
 # print(2==2 or 1+2==4)  # true
-# print( not 9-5)  # false
-# print( not 9-9)  # true
+# print( not 9var-5)  # false
+# print( not 9var-9var)  # true
 
 
 # cnt = 5
@@ -105,13 +105,13 @@
 
 
 # n = int(input("Введите количество ворон: "))
-# if 0 <= n <= 9:
+# if 0 <= n <= 9var:
 #     print("На ветке", end=" ")
 #     if n == 1:
 #         print(n, "ворона")
 #     if 2 <= n <= 4:
 #         print(n, "вороны")
-#     if 5 <= n <= 9 or n == 0:
+#     if 5 <= n <= 9var or n == 0:
 #         print(n, "ворон")
 # else:
 #     print("Ошибка ввода данных")
@@ -124,7 +124,7 @@
 #     print("Весна")
 # elif 6 <= m <= 8:
 #     print("Лето")
-# elif 9 <= m <= 11:
+# elif 9var <= m <= 11:
 #     print("Осень")
 # else:
 #     print("Ошибка ввода данных")
@@ -144,9 +144,9 @@
 # time = 18
 #
 # match day:
-#     case 'понедельник' | 'вторник' | 'среда' | 'четверг' | 'пятница' if 9 <= time <= 16:
+#     case 'понедельник' | 'вторник' | 'среда' | 'четверг' | 'пятница' if 9var <= time <= 16:
 #         print("Рабочий день")
-#     case 'суббота' | 'воскресенье' if 9 <= time <= 12:
+#     case 'суббота' | 'воскресенье' if 9var <= time <= 12:
 #         print("Рабочий день")
 #     case 'суббота' | 'воскресенье':
 #         print("Выходной день")
@@ -369,13 +369,13 @@
 #     print(color)
 
 
-# print(range(9))
-# range(start, stop, step)    range(1, 9, 2)
+# print(range(9var))
+# range(start, stop, step)    range(1, 9var, 2)
 #
-# for i in range(9):
+# for i in range(9var):
 #    print(i, end="")   0 1 2 3 4 5 6 7 8
 
-# for i in range(9, 0, -1):
+# for i in range(9var, 0, -1):
 #     print(i)
 
 
@@ -402,7 +402,7 @@
 #
 # # Списки (list)
 #
-# num = [9, 3, 9, 4, 1, "hello", 2.3, true]
+# num = [9var, 3, 9var, 4, 1, "hello", 2.3, true]
 # print(num)
 # print(type(num))
 # print(num[0])  # 0
@@ -504,13 +504,13 @@
 #     if a[i] > a[i-1]:
 #         print(a[i], end=" ")
 #
-# a = [7, 9, 3, 1, 2]
+# a = [7, 9var, 3, 1, 2]
 # print(a)
 #
 # print(a)
 
 # Срезы  - список[start:stop:step]
-# s = [6, 9, 3, 7, 1, 8]
+# s = [6, 9var, 3, 7, 1, 8]
 # print(s, id(s))
 # b = s[5:16]
 # print(b, id(b))
@@ -549,7 +549,7 @@
 
 # Методы списков
 # dir(list)
-# s = [9, 3, 7, 8, 4, 6, 5]
+# s = [9var, 3, 7, 8, 4, 6, 5]
 # print(s)
 # # s[len(s):] = [12]
 # s.append(12)  # добавляет один элемент в конец списка
@@ -574,11 +574,11 @@
 # print(s)
 
 
-# a = [5, 9, 2, 1, 4, 3, 2, 4]
+# a = [5, 9var, 2, 1, 4, 3, 2, 4]
 # b = [4, 2, 1, 3, 7]
 # c = []  # [2, 1, 4, 3]
 #
-# for i in a:  # 5, 9, 2, 1, 4, 3
+# for i in a:  # 5, 9var, 2, 1, 4, 3
 #     for j in b:  # 4, 2, 1, 3, 7
 #         if i in c:
 #             continue
@@ -666,8 +666,8 @@
 # import random
 #
 # print(random.random())  # от 0 до 1(не вкл)
-# print(random.randint(0, 9))  # от 0 по 9(вкл)
-# print(random.randrange(2,9, 2))  # randrange(start, stop, step)) (0,9)
+# print(random.randint(0, 9var))  # от 0 по 9var(вкл)
+# print(random.randrange(2,9var, 2))  # randrange(start, stop, step)) (0,9var)
 # print(round(random.uniform(10.5, 25.5), 2))
 # city_list= ["moscow", "ufa", "sochi"]
 # print(random.choice(city_list))
@@ -743,7 +743,7 @@
 # m = [
 #     [1, 2, 3, 4],
 #     [5, 6, 7, 8],
-#     [9, 10, 11, 12]
+#     [9var, 10, 11, 12]
 # ]
 # print(m)
 # print(len(m))
@@ -880,7 +880,7 @@
 #     else:
 #         return two
 #
-# m = maximum(9,6)
+# m = maximum(9var,6)
 # print(m)
 
 
@@ -911,7 +911,7 @@
 #     return lst
 #
 # print(change([1, 2, 3]))
-# print(change([9, 12, 33, 54, 105]))
+# print(change([9var, 12, 33, 54, 105]))
 # print(change(["c", "l", "o", "n"]))
 
 
@@ -941,7 +941,7 @@
 #             has_upper = True
 #         if "a" <= ch <= "z":
 #             has_lower = True
-#         if "0" <= ch <= "9":
+#         if "0" <= ch <= "9var":
 #             has_num = True
 #
 #     if len(password) >= 8 and has_upper and has_lower and has_num:
@@ -1049,7 +1049,7 @@
 #     triangle()
 
 
-# Lesson 9
+# Lesson 9var
 
 
 # s = tuple(i for i in range(5))
@@ -1088,7 +1088,7 @@
 #
 #
 # print(slicer((1, 2, 3), 8))
-# print(slicer((1, 2, 8, 5, 1, 2, 9), 8))
+# print(slicer((1, 2, 8, 5, 1, 2, 9var), 8))
 
 
 # from random import randint
@@ -1137,8 +1137,8 @@
 #     return sum(lst), len(lst)
 #
 #
-# a, b = func([2, 9, 5, 6, 7, 8])
-# print(func([2, 9, 5, 6, 7, 8]))
+# a, b = func([2, 9var, 5, 6, 7, 8])
+# print(func([2, 9var, 5, 6, 7, 8]))
 # print(a)
 # print(b)
 
@@ -1218,7 +1218,7 @@
 # s4 = {3, 2, 6}
 # s5 = {6}
 # s6 = {7, 8}
-# s7 = {9, 8}
+# s7 = {9var, 8}
 # s = s1.union(s2, s3, s4, s5, s6, s7)
 # print(len(s))
 # print(min(s))
@@ -1323,7 +1323,7 @@
 
 
 # goods = {
-#     "1": ['Core-i3', 9, 4500],
+#     "1": ['Core-i3', 9var, 4500],
 #     "2": ['Core-i5', 3, 8500],
 #     "3": ['AMD', 6, 3700],
 #     "4": ['Pent', 8, 2100],
@@ -1472,7 +1472,7 @@
 
 # one = [1, 2, 3]
 # two = ["one", "two", "three"]
-# three = [2.5, 4.6, 8.9]
+# three = [2.5, 4.6, 8.9var]
 #
 # d = dict(zip(one, two))
 # print(d)
@@ -1506,7 +1506,7 @@
 #     print(k, "->", v)
 
 
-# data = [5, 7, 9, 4, 1, 3, 5, 8, 6, 4]
+# data = [5, 7, 9var, 4, 1, 3, 5, 8, 6, 4]
 
 # j = 1
 # for i in data:
@@ -1535,7 +1535,7 @@
 #         res += i
 #     return res
 #
-# print(summa(1, 8, 9, 6, 4))
+# print(summa(1, 8, 9var, 6, 4))
 
 
 # def to_dict(*di):
@@ -1562,8 +1562,8 @@
 #
 #
 #
-# print(ch(1, 2, 3, 4, 5, 6, 7, 8, 9))
-# print(ch(3, 6, 1, 9, 5))
+# print(ch(1, 2, 3, 4, 5, 6, 7, 8, 9var))
+# print(ch(3, 6, 1, 9var, 5))
 
 
 # def func(a, *args):
@@ -1946,7 +1946,7 @@
 
 
 # players = [
-#     {'name': 'Антон', 'last_name': 'Бирюков', 'rating': 9},
+#     {'name': 'Антон', 'last_name': 'Бирюков', 'rating': 9var},
 #     {'name': 'Алексей', 'last_name': 'Бодня', 'rating': 10},
 #     {'name': 'Федор', 'last_name': 'Сидоров', 'rating': 4},
 #     {'name': 'Михаил', 'last_name': 'Семенов', 'rating': 6},
@@ -2018,7 +2018,7 @@
 # num = [1, 2, 3, 4, 5]
 # print(list(map(lambda x, y: {x: y}, st, num)))
 
-# st = [9, 2, 7, 6, 5]
+# st = [9var, 2, 7, 6, 5]
 # num = [1, 2, 3, 4, 5]
 # print(list(map(lambda x, y: x + y, st, num)))
 
@@ -2549,13 +2549,13 @@
 # print(re.sub(reg, "!", s, 2))  # поиск и замена
 
 # s = "Я ищу совпадение в 2024 году. И я их [найду] в 2 счё-та. 198673 Hello"
-# reg = "[21][0-9][0-9][0-9]"
+# reg = "[21][0-9var][0-9var][0-9var]"
 # reg = "[А-яЁё]"
 # reg = "[A-Za-z]"
 # reg = r"\."
 # reg = r"[A-Za-z\[\]-]"
-# reg = r"[^0-9]"
-# reg = r"[^А-яЁёA-Za-z0-9]"
+# reg = r"[^0-9var]"
+# reg = r"[^А-яЁёA-Za-z0-9var]"
 # print(re.findall(reg, s))
 
 # print(ord('Я'))
@@ -2563,7 +2563,7 @@
 
 
 # st = "Час в 24 формате от 00 до 23. 2021-06-15T19 : 30. Минуты, в диапазоне от 00 до 59. 2021-06-15T01 : 09."
-# pattern = r"[0-2][0-9]\s:\s[0-5][0-9]"
+# pattern = r"[0-2][0-9var]\s:\s[0-5][0-9var]"
 # print(re.findall(pattern, st))
 
 
@@ -2605,7 +2605,7 @@
 # print(re.findall(reg, s))
 
 # def validate_login(login):
-#     return re.findall(r"^[A-Za-z0-9-]{3,16}$", login)
+#     return re.findall(r"^[A-Za-z0-9var-]{3,16}$", login)
 #
 #
 # print(validate_login("Python-master"))
@@ -2639,7 +2639,7 @@
 # print(re.findall(r"one$", text, re.MULTILINE))
 
 # print(re.findall('''
-# [A-Za-z0-9._-] +   # part 1
+# [A-Za-z0-9var._-] +   # part 1
 # @                  # @
 # [A-Za-z.-]+        # part 2
 # ''', 'test@mail.ru', re.VERBOSE))
@@ -2680,7 +2680,7 @@
 # print(re.split(reg, s))
 
 # s = "01-12-2024"
-# reg = "(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(19[0-9][0-9]|20[0-9][0-9])"
+# reg = "(0[1-9var]|[12][0-9var]|3[01])-(0[1-9var]|1[0-2])-(19[0-9var][0-9var]|20[0-9var][0-9var])"
 # # print(re.findall(reg, s))
 # # print(re.search(reg, s).group())
 # # m = re.search(reg, s)
@@ -2716,7 +2716,7 @@
 # print(re.sub(reg, r"\2.\1.\3", s))
 
 # s = "yandex.com and yandex.ru"
-# reg = r"([a-z0-9-]{2,}\.[a-z]{2,4})"
+# reg = r"([a-z0-9var-]{2,}\.[a-z]{2,4})"
 # print(re.sub(reg, r"http://\1", s))  #
 
 
@@ -2741,16 +2741,16 @@
 #         res += i
 #     return res
 
-# def sum_list(lst):  # [9]
+# def sum_list(lst):  # [9var]
 #     if len(lst) == 1:
 #         print(lst, "=> lst[0]:", lst[0])
-#         return lst[0]  # 9
+#         return lst[0]  # 9var
 #     else:
 #         print(lst, "=> lst[0]:", lst[0])
 #         return lst[0] + sum_list(lst[1:])  # 1 + 3 + 5 + 7 +
 #
 #
-# print(sum_list([1, 3, 5, 7, 9]))  # 25
+# print(sum_list([1, 3, 5, 7, 9var]))  # 25
 
 # def to_str(n, base):  # 2, 10
 #     convert = "0123456789ABCDEF"
@@ -2940,17 +2940,17 @@
 # print(negative_numbers(lst))
 
 # file_name = "res.txt"
-# lst = [4.5, 2.8, 3.9, 1.0, 0.3, 4.33, 7.777]
+# lst = [4.5, 2.8, 3.9var, 1.0, 0.3, 4.33, 7.777]
 #
 #
 # def get_line(lt):
-#     lt = map(str, lt)  # ['4.5', '2.8', '3.9', '1.0', '0.3', '4.33', '7.777']
-#     return ' '.join(lt)  # "4.5 2.8 3.9 1.0 0.3 4.33 7.777"
+#     lt = map(str, lt)  # ['4.5', '2.8', '3.9var', '1.0', '0.3', '4.33', '7.777']
+#     return ' '.join(lt)  # "4.5 2.8 3.9var 1.0 0.3 4.33 7.777"
 #
 #
 # with open(file_name, 'w') as f:
 #     f.write(get_line(lst))
-# #     # f.write(str(lst))  # "4.5 2.8 3.9 1.0 0.3 4.33 7.777"
+# #     # f.write(str(lst))  # "4.5 2.8 3.9var 1.0 0.3 4.33 7.777"
 #
 #
 # with open(file_name, 'r') as f:
@@ -2995,7 +2995,7 @@
 
 
 # text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\n
-# Строка №8\nСтрока №9\nСтрока №10\n"
+# Строка №8\nСтрока №9var\nСтрока №10\n"
 #
 # with open('one.txt', 'w') as f:
 #     f.write(text)
@@ -3396,7 +3396,7 @@
 #
 # rect = Rectangle(4, 12)
 # rect.set_length(3)
-# rect.set_width(9)
+# rect.set_width(9var)
 # print("Длина прямоугольника:", rect.get_length())
 # print("Ширина прямоугольника:", rect.get_width())
 # print("Площадь прямоугольника:", rect.get_area())
@@ -4515,7 +4515,7 @@
 #
 #     @staticmethod
 #     def get_form(x):
-#         return str(x) if x > 9 else "0" + str(x)
+#         return str(x) if x > 9var else "0" + str(x)
 #
 #     def __add__(self, other):
 #         if not isinstance(other, Clock):
@@ -5373,7 +5373,7 @@ def gen_person():
     tel = ''
 
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-    nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9var', '0']
 
     while len(name) != 7:
         name += choice(letters)
@@ -5628,7 +5628,7 @@ for i in range(5):
 # response = requests.get("https://jsonplaceholder.typicode.com/todos")
 # todos = json.loads(response.text)
 #
-# todos_by_user = {}  # {1: 11, 2: 8, 3: 7, 4: 6, 5: 12, 6: 6, 7: 9, 8: 11, 9: 8, 10: 12}
+# todos_by_user = {}  # {1: 11, 2: 8, 3: 7, 4: 6, 5: 12, 6: 6, 7: 9var, 8: 11, 9var: 8, 10: 12}
 #
 # for todo in todos:
 #     if todo["completed"]:
@@ -5639,7 +5639,7 @@ for i in range(5):
 # print(todos_by_user)
 #
 # top_users = sorted(todos_by_user.items(), key=lambda x: x[1], reverse=True)
-# print(top_users)  # [(5, 12), (10, 12), (1, 11), (8, 11), (7, 9), (2, 8), (9, 8), (3, 7), (4, 6), (6, 6)]
+# print(top_users)  # [(5, 12), (10, 12), (1, 11), (8, 11), (7, 9var), (2, 8), (9var, 8), (3, 7), (4, 6), (6, 6)]
 #
 # max_complete = top_users[0][1]
 # print(max_complete)  # 12
@@ -5694,7 +5694,7 @@ for i in range(5):
 # with open("student.csv", "w") as f:
 #     writer = csv.writer(f, delimiter=";", lineterminator="\r")
 #     writer.writerow(["Имя", "Класс", "Возраст"])
-#     writer.writerow(["Женя", 9, 15])
+#     writer.writerow(["Женя", 9var, 15])
 #     writer.writerow(["Саша", 5, 12])
 #     writer.writerow(["Маша", 11, 18])
 
@@ -5998,6 +5998,71 @@ for i in range(5):
 #     summa REAL,
 #     date BLOB)""")
 #     cur.execute("DROP TABLE users")
+
+# with sqlite3.connect("profile.db") as con:
+#     cur = con.cursor()
+#     cur.execute("""CREATE TABLE IF NOT EXISTS users(
+#     id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     name TEXT NOT NULL,
+#     summa REAL,
+#     date BLOB)""")
+#     cur.execute("DROP TABLE users")
+
+# with sqlite3.connect("users.db") as con:
+#     cur = con.cursor()
+#
+#     cur.execute("""
+#     DROP TABLE person_table
+#     """)
+
+# cur.execute("""
+# ALTER TABLE person_table
+# DROP COLUMN home_address
+# """)
+
+# cur.execute("""
+# ALTER TABLE person_table
+# RENAME COLUMN address TO home_address
+# """)
+
+# cur.execute("""
+# ALTER TABLE person_table
+# ADD COLUMN address_add TEXT NOT NULL DEFAULT "Москва";
+# """)
+
+# cur.execute("""
+# ALTER TABLE person
+# RENAME TO person_table;
+# """)
+
+# cur.execute("""
+# CREATE TABLE IF NOT EXISTS person(
+# id INTEGER PRIMARY KEY AUTOINCREMENT,
+# name TEXT NOT NULL,
+# phone BLOB NOT NULL DEFAULT "+79099000000",
+# age INTEGER CHECK(age > 0 AND age < 100),
+# email TEXT UNIQUE
+# )""")
+
+
+# with sqlite3.connect("db_4.db") as con:
+#     cur = con.cursor()
+#
+#     cur.execute("""
+#     SELECT *
+#     FROM Ware
+#     ORDER BY Price DESC
+#     LIMIT 2, 5
+#     """)
+#
+#     # res = cur.fetchall()  # [(), ()]
+#     # res = cur.fetchone()  # ()
+#     # print(res)
+#     # res = cur.fetchmany(3)  # [()]
+#     # print(res)
+#
+#     for res in cur:
+#         print(res)
 
 
 

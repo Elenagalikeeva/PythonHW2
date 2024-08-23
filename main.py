@@ -200,7 +200,7 @@
 #     print("Конец программы")
 
 
-# n= input("number one:")
+# n= input("number one project:")
 # m =input("number two:")
 #
 # try:
@@ -874,9 +874,9 @@
 # get_sum("adf", "dhf")
 
 
-# def maximum(one, two):
-#     if one > two:
-#         return one
+# def maximum(one project, two):
+#     if one project > two:
+#         return one project
 #     else:
 #         return two
 #
@@ -1260,25 +1260,25 @@
 # Словарь (dict) - изменяемый тип
 
 # s = [1, 2, 3]
-# d = {"one": 1, "two": 2, "three": 3}
+# d = {"one project": 1, "two": 2, "three": 3}
 # print(s[1])
 # print(d["two"])
 
-# s1 = ["one", "two", "three"]
-# d1 = {1: "one", 2: "two", 3: "three"}
+# s1 = ["one project", "two", "three"]
+# d1 = {1: "one project", 2: "two", 3: "three"}
 # print(d1[2])
 
-# d = {0: "test", "one": 45, (1, 2.3): "кортеж", True: 1, False: 35}  # set, list, False no!
+# d = {0: "test", "one project": 45, (1, 2.3): "кортеж", True: 1, False: 35}  # set, list, False no!
 # print(d[True])
 # d[(1, 2.3)] = 100
 
 
-# d = {'one': 1, 'two': 2}
-# d1 = dict(one=1, two=2)
-# d2 = dict([('one', 1), ('two', 2)])
+# d = {'one project': 1, 'two': 2}
+# d1 = dict(one project=1, two=2)
+# d2 = dict([('one project', 1), ('two', 2)])
 #
 # d = {x: x** 2 for x in range(7)}
-# d = {"one": 1, "two": 2, "three": 3}
+# d = {"one project": 1, "two": 2, "three": 3}
 # print("two" in d)
 # print(len(d))
 # for key in d:
@@ -1357,7 +1357,7 @@
 
 # del d['x1']
 # d['x4'] = 10
-# a = {'one': 1}
+# a = {'one project': 1}
 #
 # print(d.values())
 # print(d.keys())
@@ -1393,9 +1393,9 @@
 # d.clear()  # all delete
 
 # item3 = d.setdefault("x4", 10)  # add "x4": none (10)
-# a = {"one": 1, "two": 2, "x1":10}
+# a = {"one project": 1, "two": 2, "x1":10}
 # a = list(a.items())
-# a = [("one", 1), ("two", 2), ("x1", 10)]
+# a = [("one project", 1), ("two", 2), ("x1", 10)]
 # d.update(a)  # d+a
 
 
@@ -1447,22 +1447,22 @@
 #             print("\t\t", z, ":", d[x][y][z])
 
 
-# d = {'one':1, 'two':2, 'three':3, 'four': 4}
+# d = {'one project':1, 'two':2, 'three':3, 'four': 4}
 # d2 = {key: value for key, value in d.items()}
 # d2 = {key: value for key, value in d.items() if value <=2}
 # print(d2)
 # d2[1], d2[4]= d2[4], d2[1]
 
 
-# a = ['one', 1, 2, 3, 'two', 10, 20, 'three', 15, 36, 60, 'four', -20]
+# a = ['one project', 1, 2, 3, 'two', 10, 20, 'three', 15, 36, 60, 'four', -20]
 #
 # d = dict()
 # s = none
 #
 # for i in a:
 #     if type(i)== str:
-#         d[i] = []  # d['one']=[]
-#         s = i  # s= 'one'
+#         d[i] = []  # d['one project']=[]
+#         s = i  # s= 'one project'
 #     else:
 #         d[s].append(i)  # d[1]
 # print(d)
@@ -1470,37 +1470,37 @@
 
 # zip()
 
-# one = [1, 2, 3]
-# two = ["one", "two", "three"]
+# one project = [1, 2, 3]
+# two = ["one project", "two", "three"]
 # three = [2.5, 4.6, 8.9var]
 #
-# d = dict(zip(one, two))
+# d = dict(zip(one project, two))
 # print(d)
 #
-# lst = list(zip(one, two, three))
-# lst = list(zip(one))
+# lst = list(zip(one project, two, three))
+# lst = list(zip(one project))
 #
-# f = {k: v for k, v in zip(one, two)}
+# f = {k: v for k, v in zip(one project, two)}
 # print(f)
 #
 #
-# one = {"name": "ira", "surname": "koka", "job": "prog"}
+# one project = {"name": "ira", "surname": "koka", "job": "prog"}
 # two = {"name": "iran", "surname": "kuki", "job": "pr"}
 #
-# for (k1, v1), (k2, v2) in zip(one.items(), two.items()):
+# for (k1, v1), (k2, v2) in zip(one project.items(), two.items()):
 #     print(k1, "->", v1)
 #     print(k2, "->", v2)
 
 
-# lst = [(1, 'one'), (2, 'two'), (3, 'three')]
+# lst = [(1, 'one project'), (2, 'two'), (3, 'three')]
 # a, b = zip(*lst)
 # print(a)
 # print(b)
 
 
-# a = {"one": 1, 'two':2, 'three':3}
+# a = {"one project": 1, 'two':2, 'three':3}
 # b = {'three':3, 'four':4}
-# print({**a, **b})  # {"one": 1, 'two':2, 'three':3, 'four':4}
+# print({**a, **b})  # {"one project": 1, 'two':2, 'three':3, 'four':4}
 #
 # for k, v in {**a, **b}.items():
 #     print(k, "->", v)
@@ -1607,7 +1607,7 @@
 #     my_dict.update(**kwargs)
 #
 #
-# my_dict = {'one': 'first'}
+# my_dict = {'one project': 'first'}
 # db(k=22, k2=31, k3=45, k4=91)
 # db(name="bob", age=31, weight=61, color="blue")
 # print(my_dict)
@@ -2629,14 +2629,14 @@
 # print(re.findall(reg, s, re.I))
 
 # text = """
-# one
+# one project
 # two
 # """
 
-# print(re.findall(r"one.\w+", text))
-# print(re.findall(r"one.\w+", text, re.DOTALL))
-# print(re.findall(r"one$", text))
-# print(re.findall(r"one$", text, re.MULTILINE))
+# print(re.findall(r"one project.\w+", text))
+# print(re.findall(r"one project.\w+", text, re.DOTALL))
+# print(re.findall(r"one project$", text))
+# print(re.findall(r"one project$", text, re.MULTILINE))
 
 # print(re.findall('''
 # [A-Za-z0-9var._-] +   # part 1
@@ -2997,11 +2997,11 @@
 # text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\n
 # Строка №8\nСтрока №9var\nСтрока №10\n"
 #
-# with open('one.txt', 'w') as f:
+# with open('one project.txt', 'w') as f:
 #     f.write(text)
 
 
-# with open('one.txt', 'r') as fr, open('two.txt', 'w') as fw:
+# with open('one project.txt', 'r') as fr, open('two.txt', 'w') as fw:
 #     for line in fr:
 #         line = line.replace("Строка", "Линия -")
 #         fw.write(line)
@@ -5363,45 +5363,45 @@
 # print(type(data1))
 
 
-import json
-import socket
-from random import choice
+# import json
+# import socket
+# from random import choice
+#
+#
+# def gen_person():
+#     name = ''
+#     tel = ''
+#
+#     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+#     nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9var', '0']
+#
+#     while len(name) != 7:
+#         name += choice(letters)
+#
+#     while len(tel) != 10:
+#         tel += choice(nums)
+#
+#     person = {
+#         'name': name,
+#         'tel': tel
+#     }
+#
+#     return person
 
 
-def gen_person():
-    name = ''
-    tel = ''
-
-    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-    nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9var', '0']
-
-    while len(name) != 7:
-        name += choice(letters)
-
-    while len(tel) != 10:
-        tel += choice(nums)
-
-    person = {
-        'name': name,
-        'tel': tel
-    }
-
-    return person
-
-
-def write_json(person_dict):
-    try:
-        data = json.load(open('persons.json'))  # [{}, {}, {}, {}, {}]
-    except FileNotFoundError:
-        data = []
-
-    data.append(person_dict)  # [{}, {}, {}, {}, {}, {}, {}]
-    with open("persons.json", "w") as f:
-        json.dump(data, f, indent=2)  # [{}, {}, {}, {}, {}, {}, {}]
-
-
-for i in range(5):
-    write_json(gen_person())
+# def write_json(person_dict):
+#     try:
+#         data = json.load(open('persons.json'))  # [{}, {}, {}, {}, {}]
+#     except FileNotFoundError:
+#         data = []
+#
+#     data.append(person_dict)  # [{}, {}, {}, {}, {}, {}, {}]
+#     with open("persons.json", "w") as f:
+#         json.dump(data, f, indent=2)  # [{}, {}, {}, {}, {}, {}, {}]
+#
+#
+# for i in range(5):
+#     write_json(gen_person())
 
 # import json
 #
@@ -6063,6 +6063,341 @@ for i in range(5):
 #
 #     for res in cur:
 #         print(res)
+
+
+# import sqlite3
+
+# cars_list = [
+#     ('BMW', 54000),
+#     ('Chevrolet', 46000),
+#     ('Daewoo', 38000),
+#     ('Citroen', 29000),
+#     ('Honda', 33000),
+# ]
+#
+# with sqlite3.connect("car.db") as con:
+#     cur = con.cursor()
+#     cur.execute("""
+#     CREATE TABLE IF NOT EXISTS cars (
+#         car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         model TEXT,
+#         price INTEGER
+#     )
+#     """)
+#
+#     cur.executescript("""
+#     DELETE FROM cars WHERE model LIKE 'B%';
+#     UPDATE cars SET price = price + 100;
+#     """)
+
+# cur.execute(f"UPDATE cars SET price = :Price where model LIKE 'B%'", {'Price': 0})
+
+# cur.executemany("INSERT INTO cars VALUES(NULL, ?, ?)", cars_list)
+
+# for car in cars_list:
+#     cur.execute("INSERT INTO cars VALUES(NULL, ?, ?)", car)
+
+# cur.execute("INSERT INTO cars VALUES(1, 'Renault', 22000)")
+# cur.execute("INSERT INTO cars VALUES(2, 'Volvo', 29000)")
+# cur.execute("INSERT INTO cars VALUES(3, 'Mercedes', 57000)")
+# cur.execute("INSERT INTO cars VALUES(4, 'Bentley', 35000)")
+# cur.execute("INSERT INTO cars VALUES(5, 'Audi', 52000)")
+
+# con.commit()
+# con.close()
+
+
+# import sqlite3
+#
+# con = None
+# try:
+#     con = sqlite3.connect("car.db")
+#     cur = con.cursor()
+#     cur.executescript("""
+#     CREATE TABLE IF NOT EXISTS cars (
+#         car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         model TEXT,
+#         price INTEGER
+#     );
+#     BEGIN;
+#     INSERT INTO cars VALUES(NULL, 'Renault', 22000);
+#     UPDATE cars2 SET price = price + 100;
+#     """)
+#     con.commit()
+# except sqlite3.Error as e:
+#     if con:
+#         con.rollback()
+#     print("Ошибка выполнения запроса")
+# finally:
+#     if con:
+#         con.close()
+
+
+# import sqlite3
+#
+# with sqlite3.connect("car.db") as con:
+#     con.row_factory = sqlite3.Row
+#     cur = con.cursor()
+#     cur.executescript("""
+#     CREATE TABLE IF NOT EXISTS cars (
+#         car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         model TEXT,
+#         price INTEGER
+#     );
+#     CREATE TABLE IF NOT EXISTS cost (
+#         name TEXT, tr_in INTEGER, buy INTEGER
+#     );
+#     """)
+#
+#     # cur.execute("INSERT INTO cars VALUES(NULL, 'Запорожец', 1000)")
+#     # last_row_id = cur.lastrowid
+#     # buy_car_id = 2
+#     # cur.execute("INSERT INTO cost VALUES('Илья', ?, ?)", (last_row_id, buy_car_id))
+#
+#     cur.execute("SELECT model, price FROM cars")
+#
+#     # rows = cur.fetchall()
+#     # print(rows)
+#     # rows = cur.fetchone()
+#     # print(rows)
+#     # rows = cur.fetchmany(5)
+#     # print(rows)
+#     # print()
+#     for res in cur:
+#         # print(res[0], res[1])
+#         print(res['model'], res['price'])
+
+
+# import sqlite3
+#
+#
+# def read_ava(n):
+#     try:
+#         with open(f"avatars/{n}.png", "rb") as f:
+#             return f.read()
+#     except IOError as e:
+#         print(e)
+#         return False
+
+#
+# def write_ava(name, data):
+#     try:
+#         with open(name, "wb") as f:
+#             f.write(data)
+#     except IOError as e:
+#         print(e)
+#         return False
+#     return True
+#
+#
+# with sqlite3.connect("car.db") as con:
+#     con.row_factory = sqlite3.Row
+#     cur = con.cursor()
+#
+#     cur.execute("""
+#     CREATE TABLE IF NOT EXISTS users (
+#         name TEXT,
+#         ava BLOB,
+#         score INTEGER
+#     )""")
+#
+#     img = read_ava(1)
+#     if img:
+#         binary = sqlite3.Binary(img)
+#         cur.execute("INSERT INTO users VALUES ('Илья', ?, 1000)", (binary,))
+
+#     cur.execute("SELECT ava FROM users")
+#     img = cur.fetchone()['ava']
+#
+#     write_ava("out.png", img)
+
+
+# import sqlite3
+
+# with sqlite3.connect("car.db") as con:
+#     cur = con.cursor()
+#
+#     with open("sql_dump.sql", "w") as f:
+#         for sql in con.iterdump():
+#             f.write(sql)
+
+
+# with sqlite3.connect("car_new.db") as con:
+#     cur = con.cursor()
+#
+#     with open("sql_dump.sql", "r") as f:
+#         sql = f.read()
+#         cur.executescript(sql)
+
+
+# from jinja2 import Template
+
+# name = "Игорь"
+# age = 28
+#
+# tm = Template("Мне {{ a*2 }} лет. Меня зовут {{ n.upper() }}.")
+# msg = tm.render(n=name, a=age)
+#
+# print(msg)
+
+
+# per = {"name": "Игорь", "age": 28}
+#
+# tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p['name'] }}.")
+# msg = tm.render(p=per)
+#
+# print(msg)
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def get_name(self):
+#         return self.name
+#
+#
+# per = Person("Игорь", 28)
+#
+# tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p.get_name() }}.")
+# msg = tm.render(p=per)
+#
+# print(msg)
+
+# from jinja2 import Template
+#
+# cities = [
+#     {"id": 1, "city": "Москва"},
+#     {"id": 2, "city": "Сочи"},
+#     {"id": 3, "city": "Смоленск"},
+#     {"id": 4, "city": "Ярославль"},
+#     {"id": 5, "city": "Минск"}
+# ]
+#
+# link = """
+# <select name='cities'>
+#     {% for c in cities -%}
+#         {% if c.id > 3 -%}
+#             <option value="{{ c['id'] }}">{{ c['city'] }}</option>
+#         {% elif c.city == "Москва" %}
+#             <option>{{ c['city'] }}</option>
+#         {% else -%}
+#             {{ c['city'] }}
+#         {% endif -%}
+#     {% endfor -%}
+# </select>
+# """
+#
+# tm = Template(link)
+# msg = tm.render(cities=cities)
+#
+# print(msg)
+
+
+# from jinja2 import Template
+
+# cars = [
+#     {'model': 'Audi', 'price': 23000},
+#     {'model': 'Skoda', 'price': 17300},
+#     {'model': 'Renault', 'price': 44300},
+#     {'model': 'Wolksvagen', 'price': 21300}
+# ]
+#
+# # tp1 = "{{ (cs | min(attribute='price')).model }}"
+# # tp1 = "{{ cs | random }}"
+# tp1 = "{{ cs | replace('model', 'brand') }}"
+# tm = Template(tp1)
+# msg = tm.render(cs=cars)
+#
+# print(msg)
+# print(cars)
+
+# html = '''
+# {% macro get_input(name, value='', type='text', size=20) %}
+#     <input type="{{ type }}" name="{{ name }}" value="{{ value }}" size="{{ size }}">
+# {% endmacro %}
+#
+# <p>{{ get_input('username') }}</p>
+# <p>{{ get_input('email') }}</p>
+# <p>{{ get_input('password', type='password') }}</p>
+# '''
+#
+# tm = Template(html)
+# msg = tm.render()
+#
+# print(msg)
+
+
+# from jinja2 import Environment, FileSystemLoader
+
+# persons = [
+#     {"name": "Алексей", "year": 18, "weight": 78.5},
+#     {"name": "Никита", "year": 28, "weight": 82.3},
+#     {"name": "Виталий", "year": 33, "weight": 94.0}
+# ]
+#
+# file_loader = FileSystemLoader('templates')
+# env = Environment(loader=file_loader)
+#
+# tm = env.get_template('main.html')
+# msg = tm.render(users=persons, title="About Jinja")
+#
+# print(msg)
+
+from jinja2 import Environment, FileSystemLoader
+
+subs = ["Культура", "Наука", "Политика", "Спорт"]
+
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+
+tm = env.get_template('abouts.html')
+msg = tm.render(list_table=subs)
+
+print(msg)
+
+
+
+# import time
+# import math
+
+# tm = math.floor(time.time())
+# print(time.time())
+# print(math.floor(time.time()))
+
+# from jinja2 import Template
+#
+# spisok = [
+#     {"href": "index", "zagolov": "Главная"},
+#     {"href": "news", "zagolov": "Новости"},
+#     {"href": "about", "zagolov": "О компании"},
+#     {"href": "shop", "zagolov": "Магазин"},
+#     {"href": "contacts", "zagolov": "Контакты"}
+# ]
+#
+# link = """
+# <ul>
+#     {% for s in spisok -%}
+#         {% if s.zagolov == "Главная" %}
+#             <li><a href="/{{ s.href }}" class="active">{{ s.zagolov }}</a></li>
+#         {% else %}
+#             <li><a href="/{{ s.href }}">{{ s.zagolov }}</a></li>
+#         {% endif -%}
+#     {% endfor -%}
+# </ul>
+# """
+#
+# tm = Template(link)
+# msg = tm.render(spisok=spisok)
+# print(msg)
+
+
+
+
+
+
+
+
 
 
 

@@ -467,13 +467,13 @@
 
 
 
-for n in range(600):
-    deli = []
-    for d in range(17, n, 10):
-        if n %d ==0:
-            deli.append(d)
-    if deli:
-        print(len(deli))
+# for n in range(600):
+#     deli = []
+#     for d in range(17, n, 10):
+#         if n %d ==0:
+#             deli.append(d)
+#     if deli:
+#         print(len(deli))
 
 # 25
 

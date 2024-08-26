@@ -21,6 +21,7 @@ body{
 .flash{
     padding: 10px;
 }
+
 .flash.success{
     border: 1px solid #21db56;
     background: #aeffc5;
@@ -33,4 +34,41 @@ body{
 .menu a{
     font-weight: bold;
     color: #ed5a5a;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+p>a{
+    text-decoration: none;
+    color: brown;
+}
+
+li>p, li div{
+    border: 1px solid rgb(169, 169, 169);
+    
+}
+
+p.title{
+    margin: 0;
+    font-weight: bold;
+    background: gold;
+}
+
+p.title a{
+    display: block;
+    padding: 10px 20px;
+}
+
+p.title:hover{
+    background: orange;
+}
+
+.annonce{
+    margin-top: -1px;
+    margin-bottom: 40px;
+    background: #FFF;
+    padding: 10px 20px 20px;
 }

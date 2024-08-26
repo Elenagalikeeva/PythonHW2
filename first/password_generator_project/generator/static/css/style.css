@@ -1,0 +1,31 @@
+body{
+    background: rgb(246, 235, 212);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.container form, .container h2{
+    background-color: rgb(217, 192, 133);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.cont{
+    background-color: rgb(217, 192, 133);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 400px;
+    margin: 30px auto;
+
+}
+

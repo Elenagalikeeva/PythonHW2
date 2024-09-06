@@ -1,0 +1,25 @@
+{% extends 'kam/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Камчатка</h1>
+
+<div class="img">
+    <img src="{% static 'kam/00_aleksandr_kukrinov_saharnoe_utro_529605.jpg'%}" alt="">
+</div>
+
+<h2>Уникальные места края</h2>
+<div class="block">
+    {% for project in projects %}
+    <div class="element">
+        <div>
+            <img src="{{ project.image.url }}" alt="">
+        </div>
+        <div class="text">
+            <h2><a href="{{ project.url }}" target="_blank"> {{ project.title }}</a></h2>
+            <p>{{ project.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

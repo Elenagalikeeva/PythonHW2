@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+<div class="menu">
+    <div class="wrap1">
+        <ul>
+            {% if user.is_authenticated %}
+                <li class="logo">Пользователь: {{ user.username }}</li>
+                <li><a href="{% url 'kab' %}">Личный кабинет</a></li>
+                <li>
+                    <form action="{% url 'logoutuser' %}" method="post">
+                        {% csrf_token %}
+                        <button class="top">Выйти</button>
+                    </form>
+                </li>
+            {% else %}
+            <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
+            <li><a href="{% url 'loginuser' %}">Войти</a></li>
+            {% endif %}
+        </ul>
+        <ul>
+            <li><a href="{% url 'index' %}">Главная</a></li>
+            <li><a href="{% url 'blogs' %}">Актуальные экскурсии</a></li>
+        </ul>
+    </div>
+</div>
 <div class="content">
     <div class="wrap">
         {% block content %}

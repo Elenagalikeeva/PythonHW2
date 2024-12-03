@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kam.apps.KamConfig',
+    'crm.apps.CrmConfig',
+    'sample.apps.SampleConfig',
 ]
 
 MIDDLEWARE = [
@@ -100,6 +102,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/leave_review/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

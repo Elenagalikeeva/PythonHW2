@@ -6344,17 +6344,17 @@
 #
 # print(msg)
 
-from jinja2 import Environment, FileSystemLoader
-
-subs = ["Культура", "Наука", "Политика", "Спорт"]
-
-file_loader = FileSystemLoader('templates')
-env = Environment(loader=file_loader)
-
-tm = env.get_template('abouts.html')
-msg = tm.render(list_table=subs)
-
-print(msg)
+# from jinja2 import Environment, FileSystemLoader
+#
+# subs = ["Культура", "Наука", "Политика", "Спорт"]
+#
+# file_loader = FileSystemLoader('templates')
+# env = Environment(loader=file_loader)
+#
+# tm = env.get_template('abouts.html')
+# msg = tm.render(list_table=subs)
+#
+# print(msg)
 
 
 
@@ -6395,9 +6395,23 @@ print(msg)
 
 
 
+# p = True
+# def f1():
+#     p = None
+#
+#     def f2():
+#         nonlocal p
+#         p = "py"
+#
+#     f2()
+# f1()
+# print(p)
 
-
-
-
-
+# def f(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * f(n-1)
+#
+# print(f(5))
 

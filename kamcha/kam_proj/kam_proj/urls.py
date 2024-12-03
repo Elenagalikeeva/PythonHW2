@@ -20,6 +20,8 @@ from django.conf.urls.static import static
 from django.conf import settings
 from kam import views
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
@@ -29,6 +31,14 @@ urlpatterns = [
     path('kabinet/', views.kabinet, name='kab'),
     path('logout/', views.logoutuser, name='logoutuser'),
     path('login/', views.loginuser, name='loginuser'),
+    path('vosho/', views.vosho, name='vosho'),
+    path('more/', views.more, name='more'),
+    path('obzor/', views.obzor, name='obzor'),
+    path('vse/', views.vse, name='vse'),
+    path('thanks/', views.thanks_page, name='thanks_page'),
+    path('carusel/', views.carusel, name='products'),
+    path('leave_review/', views.leave_review, name='leave_review'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
